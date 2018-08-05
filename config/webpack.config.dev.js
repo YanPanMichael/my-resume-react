@@ -23,7 +23,7 @@ const paths = require('./paths');
 // Webpack uses `publicPath` to determine where the app is being served from.
 // In development, we always serve from the root. This makes config easier.
 const publicPath = '/';
-// const publicPath = paths.servedPath;
+// const publicPath = paths.servedPath; //override for solving crossing-origin problem
 
 // `publicUrl` is just like `publicPath`, but we will provide it to our app
 // as %PUBLIC_URL% in `index.html` and `process.env.PUBLIC_URL` in JavaScript.
