@@ -8,6 +8,7 @@ import rootReducer from './reducers'
 import './index.css'
 import App from './components/App'
 import registerServiceWorker from './registerServiceWorker'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 var middlewares = [thunk];
 if(process.env.NODE_ENV !== 'production') {
