@@ -25,9 +25,6 @@
     "template",
     "utils"
   ],
-  "bin": {
-    "react-scripts": "./bin/react-scripts.js"
-  },
   "dependencies": {
     "autoprefixer": "7.1.6",
     "babel-core": "6.26.0",
@@ -64,6 +61,7 @@
     "react-dev-utils": "^5.0.1",
     "react-dom": "^16.0.0",
     "react-redux": "^5.0.7",
+    "reactstrap": "^6.4.0",
     "redux": "^4.0.0",
     "redux-thunk": "^2.3.0",
     "resolve": "1.6.0",
