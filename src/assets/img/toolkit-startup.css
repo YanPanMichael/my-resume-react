@@ -1,144 +1,4 @@
-div {
-  display: block;
-}
-
-body {
-  margin: 0;
-  font-family: "Work sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 15px;
-  font-weight: 300;
-  line-height: 1.4;
-  letter-spacing: -0.02em;
-  color: #6c6f73;
-  text-align: left;
-  background-color: #fff;
-}
-
-.brz {
-  background-color: #fff;
-  position: relative;
-}
-
-.backimgClass {
-  background-image: url(../assets/img/startup-1.jpg);
-}
-
-.bqa {
-  display: table;
-  width: 100%;
-  height: 110vh;
-}
-
-.am {
-  color: #fff;
-  background-color: #000;
-}
-
-.k {
-  position: relative;
-  width: 100%;
-  padding: 60px 30px;
-  color: inherit;
-  background-color: #fff;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.main-page-bg-index {
-    width: 150%;
-    position: absolute;
-    right: 0;
-    bottom: -40px;
-}
-
-img {
-    vertical-align: middle;
-    border-style: none;
-}
-
-.bqe, .bqf, .bqg {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.ait, .aiq {
-  padding-bottom: 3rem !important;
-}
-
-.e {
-    width: 100%;
-    padding-right: 10px;
-    padding-left: 10px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.c {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -10px;
-  margin-left: -10px;
-}
-
-.ez, .fa, .fb, .fc, .fd, .fe, .ff, .fg, .fh, .fi, .fj, .fk, .ey, .fl, .fm, .fn, .fo, .fp, .fq, .fr, .fs, .ft, .fu, .fv, .fw, .fx, .fy, .fz, .ga, .gb, .gc, .gd, .ge, .gf, .gg, .gh, .gi, .gj, .gk, .gl, .gm, .gn, .go, .gp, .gq, .gr, .gs, .gt, .gu, .gv, .gw, .gx, .gy, .gz, .ha, .hb, .hc, .hd, .he, .hf, .hg, .hh, .hi, .hj, .hk, .hl, .hm, .hn, .ho, .hp {
-    position: relative;
-    width: 100%;
-    min-height: 1px;
-    padding-right: 10px;
-    padding-left: 10px;
-}
-
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-@media (min-width: 576px) {
-  .k {
-    padding: 100px 1rem;
-  }
-  .fv {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 83.33333%;
-    flex: 0 0 83.33333%;
-    max-width: 83.33333%;
-  }
-}
-
-@media (min-width: 768px) {
-  .main-page-bg-index {
-    width: 100%;
-    bottom: 0;
-  }
-  .e {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .e {
-      max-width: 1120px;
-  }
-}
-
-@media (min-width: 992px) {
-  .e {
-      max-width: 920px;
-  }
-  .gt {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-}
-
-
-
-
+@charset "UTF-8";
 @media print {
   *,
   *::before,
@@ -220,8 +80,7 @@ img {
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  }
+  box-sizing: border-box; }
 
 html {
   font-family: sans-serif;
@@ -662,10 +521,9 @@ pre {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-right: -10px;
-  margin-left: -10px;
-  }
+  margin-left: -10px; }
 
 .ex {
   margin-right: 0;
@@ -6194,8 +6052,7 @@ button.uz:focus {
 
 .ait,
 .aiq {
-  padding-bottom: 3rem !important;
-  }
+  padding-bottom: 3rem !important; }
 
 .aiu,
 .ais {
@@ -7304,6 +7161,8 @@ textarea {
 
 @font-face {
   font-family: "toolkit-entypo";
+  src: url("../fonts/toolkit-entypo.eot");
+  src: url("../fonts/toolkit-entypo.eot?#iefix") format("eot"), url("../fonts/toolkit-entypo.woff2") format("woff2"), url("../fonts/toolkit-entypo.woff") format("woff"), url("../fonts/toolkit-entypo.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
@@ -8816,8 +8675,7 @@ textarea {
 .bqa {
   display: table;
   width: 100%;
-  height: 110vh;
-  }
+  height: 110vh; }
 
 .bqb {
   margin-bottom: 20px;
@@ -8841,8 +8699,7 @@ h1.bqc {
 .bqf,
 .bqg {
   display: table-cell;
-  vertical-align: middle;
-  }
+  vertical-align: middle; }
 
 .bqf {
   vertical-align: bottom; }
@@ -9312,8 +9169,7 @@ img.zoom-img {
 
 .brz {
   background-color: #fff;
-  position: relative;
-  }
+  position: relative; }
 
 .bsa {
   position: absolute;
