@@ -817,6 +817,17 @@ td, th {
 /*  Elements Page Styles
 /* =================================== */
 /*---------- Start Elements Page -------------*/
+.site-title {
+  font-size: 24px;
+  line-height: 52px;
+  color: #666;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  font-weight: 300;
+  font-family: 'Raleway';
+}
+
 .whole-wrap {
   background-color: #f9f9ff;
 }
@@ -2086,7 +2097,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-menu ul {
   position: absolute;
-  display: none;
   top: 100%;
   right: 0;
   z-index: 99;
@@ -2101,8 +2111,12 @@ h1, h2, h3, h4, h5, h6 {
   float: left;
 }
 
-.nav-menu li:hover > ul,
+/* .nav-menu li:hover > ul,
 .nav-menu li.sfHover > ul {
+  display: block;
+} */
+
+.nav-menu li > ul {
   display: block;
 }
 
@@ -2137,6 +2151,9 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 768px) {
   #nav-menu-container {
     display: none;
+  }
+  #nav-menu-icon {
+    display: block !important;
   }
 }
 
@@ -2209,12 +2226,19 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 900;
 }
 
+div#nav-menu-icon {
+  display: none;
+}
+
 @media (max-width: 991px) {
   #mobile-nav-toggle {
     display: inline;
   }
   #nav-menu-container {
     display: none;
+  }
+  #nav-menu-icon {
+    display: block !important;
   }
 }
 

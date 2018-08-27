@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PersonalHeader from './PersonalHeader'
 import PersonalBanner from './PersonalBanner'
+import PersonalHomeabout from './PersonalHomeabout'
 
 import '../css/App.css';
 import '../css/linearicons.css';
@@ -23,6 +24,7 @@ class App extends Component {
         <MainPage /> */}
         <PersonalHeader />
         <PersonalBanner />
+        <PersonalHomeabout />
       </div>
     );
   }
