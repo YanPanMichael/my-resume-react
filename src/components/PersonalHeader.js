@@ -1,56 +1,49 @@
 import React, { Component, PropTypes } from 'react'
-import PersonalHeaderDropDown from './PersonalHeaderDropDown'
+import PersonalHeaderNavbar from './PersonalHeaderNavbar'
+import { Collapse } from 'reactstrap';
 
 class PersonalHeader extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      blogdropdownOpen: false,
-      pagedropdownOpen: false,
       collapse: false
     };
-    this.handleHeaderItemClick = this.handleHeaderItemClick.bind(this);
-    this.handleClickOutside = this.handleClickOutside.bind(this);
     this.toggle = this.toggle.bind(this);
+    this.resizeThrottler = this.resizeThrottler.bind(this);
   }
 
   toggle() {
-    this.setState({ collapse: !this.state.collapse });
+    this.setState({ 
+      collapse: !this.state.collapse
+    }, () => {this.state.collapse ? 
+      this.hiddenNavbarRef.style.display='block' : 
+      this.hiddenNavbarRef.style.display='none' 
+    });
   }
 
-  handleHeaderItemClick(stateName) {
-    this.setState((prevState) => ({
-      [stateName]: !prevState[stateName]
-    }), () => { this.state[stateName] ? this.startEventListenerByActive(stateName) : this.stopEventListenerByInActive(stateName) });
+  componentDidMount() {
+    window.addEventListener("resize", this.resizeThrottler, false);
   }
 
-  startEventListenerByActive(stateName) {
-    document.addEventListener('click', (event) => this.handleClickOutside(event, stateName, this.mapWrapperRefByName(stateName)));
+  resizeThrottler() {
+    // ignore resize events as long as an actualResizeHandler execution is in the queue
+    if ( this.resizeTimeout ) {
+      clearTimeout(this.resizeTimeout);
+    }
+    this.resizeTimeout = setTimeout(() => this.actualResizeHandler(), 500);
   }
 
-  stopEventListenerByInActive(stateName) {
-    document.removeEventListener('click', (event) => this.handleClickOutside(event, stateName, this.mapWrapperRefByName(stateName)));
-  }
-
-  handleClickOutside(event, stateName, wrapperRef) {
-    if (wrapperRef && !wrapperRef.contains(event.target)) {
+  actualResizeHandler() {
+    if(this.normalNavbarRef && window.getComputedStyle(this.normalNavbarRef, null).display == 'block' ) {
       this.setState({ 
-        [stateName]: false
-      });
-      this.stopEventListenerByInActive(stateName);
+        collapse: false
+      })
     }
   }
 
-  mapWrapperRefByName(stateName) {
-    switch (stateName) {
-      case 'blogdropdownOpen':
-        return this.wrapperBlogRef;
-      case 'pagedropdownOpen':
-        return this.wrapperPageRef;
-      default:
-        break;
-    }
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.resizeThrottler);
   }
 
   render() {
@@ -61,28 +54,19 @@ class PersonalHeader extends Component {
             <div id="logo">
               <span className="site-title">Yan Pan</span>
             </div>
-            <nav id="nav-menu-container">
-              <ul className="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="price.html">Pricing</a></li>
-                <li className="menu-has-children" ref={(node) => { this.wrapperBlogRef = node }}>
-                  <a href="javascript:void(0)" onClick={() => this.handleHeaderItemClick('blogdropdownOpen')}>Blog</a>
-                  {this.state.blogdropdownOpen && <PersonalHeaderDropDown dropItemsMapArray={{'Page 1':'page1.html','Page 2':'page2.html'}} />}
-                </li>
-                <li className="menu-has-children" ref={(node) => { this.wrapperPageRef = node }}>
-                  <a href="javascript:void(0)" onClick={() => this.handleHeaderItemClick('pagedropdownOpen')}>Pages</a>
-                  {this.state.pagedropdownOpen && <PersonalHeaderDropDown dropItemsMapArray={{'Elements':'elements.html','Level 2':'level2.html'}} />}
-                </li>
-                <li><a href="contact.html">Contact</a></li>
-              </ul>
-            </nav>
+            <PersonalHeaderNavbar navMenuContainerRefFun={(ref) => {this.normalNavbarRef = ref}} />
             <div id="nav-menu-icon" className="module widget-handle mobile-toggle right visible-sm visible-xs" onClick={this.toggle}>
               <i className="fa fa-bars"></i>
             </div>
           </div>
+          <Collapse isOpen={this.state.collapse}>
+            <div className="row align-items-center justify-content-between d-flex">
+              <div id="logo">
+                <span className="site-title"></span>
+              </div>
+              <PersonalHeaderNavbar navMenuContainerRefFun={(ref) => {this.hiddenNavbarRef = ref}} />
+            </div>
+          </Collapse>
         </div>
       </header>
     )
