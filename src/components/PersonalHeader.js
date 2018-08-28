@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react'
-import { Collapse, Button, CardBody, Card } from 'reactstrap'
+import PersonalHeaderDropDown from './PersonalHeaderDropDown'
 
 class PersonalHeader extends Component {
 
@@ -8,51 +8,48 @@ class PersonalHeader extends Component {
     this.state = {
       blogdropdownOpen: false,
       pagedropdownOpen: false,
-      collapse: false,
-      isActive: false
+      collapse: false
     };
-    this.toggleBlog = this.toggleBlog.bind(this);
-    this.togglePage = this.togglePage.bind(this);
+    this.handleHeaderItemClick = this.handleHeaderItemClick.bind(this);
     this.handleClickOutside = this.handleClickOutside.bind(this);
     this.toggle = this.toggle.bind(this);
-  }
-
-  toggleBlog() {
-    this.setState({
-      pagedropdownOpen: false,
-      blogdropdownOpen: !this.state.blogdropdownOpen
-    });
-  }
-
-  togglePage() {
-    this.setState({
-      blogdropdownOpen: false,
-      pagedropdownOpen: !this.state.pagedropdownOpen
-    });
   }
 
   toggle() {
     this.setState({ collapse: !this.state.collapse });
   }
 
-  handleHeaderItemClick() {
+  handleHeaderItemClick(stateName) {
     this.setState((prevState) => ({
-      isActive: !prevState.isActive
-    }), () => { this.state.isActive ? this.startEventListenerByActive() : this.stopEventListenerByActive() });
+      [stateName]: !prevState[stateName]
+    }), () => { this.state[stateName] ? this.startEventListenerByActive(stateName) : this.stopEventListenerByInActive(stateName) });
   }
 
-  startEventListenerByActive() {
-    document.addEventListener('click', this.handleClickOutside);
+  startEventListenerByActive(stateName) {
+    document.addEventListener('click', (event) => this.handleClickOutside(event, stateName, this.mapWrapperRefByName(stateName)));
   }
 
-  stopEventListenerByActive() {
-    document.removeEventListener('click', this.handleClickOutside);
+  stopEventListenerByInActive(stateName) {
+    document.removeEventListener('click', (event) => this.handleClickOutside(event, stateName, this.mapWrapperRefByName(stateName)));
   }
 
-  handleClickOutside(event) {
-    if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
-      this.setState({ isActive: false });
-      this.stopEventListenerByActive();
+  handleClickOutside(event, stateName, wrapperRef) {
+    if (wrapperRef && !wrapperRef.contains(event.target)) {
+      this.setState({ 
+        [stateName]: false
+      });
+      this.stopEventListenerByInActive(stateName);
+    }
+  }
+
+  mapWrapperRefByName(stateName) {
+    switch (stateName) {
+      case 'blogdropdownOpen':
+        return this.wrapperBlogRef;
+      case 'pagedropdownOpen':
+        return this.wrapperPageRef;
+      default:
+        break;
     }
   }
 
@@ -71,18 +68,13 @@ class PersonalHeader extends Component {
                 <li><a href="services.html">Services</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="price.html">Pricing</a></li>
-                <li ref={(node) => { this.wrapperRef = node }} className="menu-has-children"><a href="javascript:void(0)" onClick={this.toggleBlog}>Blog</a>
-                  {this.state.blogdropdownOpen && <ul>
-                    <li><a href="blog-home.html">Blog Home</a></li>
-                    <li><a href="blog-single.html">Blog Single</a></li>
-                  </ul>}
+                <li className="menu-has-children" ref={(node) => { this.wrapperBlogRef = node }}>
+                  <a href="javascript:void(0)" onClick={() => this.handleHeaderItemClick('blogdropdownOpen')}>Blog</a>
+                  {this.state.blogdropdownOpen && <PersonalHeaderDropDown dropItemsMapArray={{'Page 1':'page1.html','Page 2':'page2.html'}} />}
                 </li>
-                <li className="menu-has-children"><a href="javascript:void(0)" onClick={this.togglePage}>Pages</a>
-                  {this.state.pagedropdownOpen && <ul>
-                    <li><a href="elements.html">Elements</a></li>
-                    <li><a href="">Level 2 </a>
-                    </li>
-                  </ul>}
+                <li className="menu-has-children" ref={(node) => { this.wrapperPageRef = node }}>
+                  <a href="javascript:void(0)" onClick={() => this.handleHeaderItemClick('pagedropdownOpen')}>Pages</a>
+                  {this.state.pagedropdownOpen && <PersonalHeaderDropDown dropItemsMapArray={{'Elements':'elements.html','Level 2':'level2.html'}} />}
                 </li>
                 <li><a href="contact.html">Contact</a></li>
               </ul>
