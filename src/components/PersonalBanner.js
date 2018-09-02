@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import { Collapse, Button, CardBody, Card } from 'reactstrap';
 
-class PersonalBanner extends Component {
+class PersonalContentBanner extends Component {
   render() {
     return (
       <section className="banner-area">
@@ -24,8 +24,8 @@ class PersonalBanner extends Component {
   }
 }
 
-PersonalBanner.propTypes = {
+PersonalContentBanner.propTypes = {
 
 }
 
-export default PersonalBanner
+export default PersonalContentBanner

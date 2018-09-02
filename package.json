@@ -1,8 +1,8 @@
 {
-  "name": "simple-empty-app",
+  "name": "my-resume-react-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://localhost",
+  "homepage": "http://localhost/my-resume",
   "scripts": {
     "start": "node ./scripts/start.js",
     "build": "node ./scripts/build.js",

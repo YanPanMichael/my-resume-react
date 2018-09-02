@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 
-class PersonalHomeabout extends Component {
+class PersonalContentHomeabout extends Component {
 	render() {
 		return (
 			<section className="home-about-area pt-120">
@@ -24,8 +24,8 @@ class PersonalHomeabout extends Component {
 	}
 }
 
-PersonalHomeabout.propTypes = {
+PersonalContentHomeabout.propTypes = {
 
 }
 
-export default PersonalHomeabout
+export default PersonalContentHomeabout
