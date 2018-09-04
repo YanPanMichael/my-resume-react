@@ -16,7 +16,7 @@ class PersonalHeaderNavbar extends Component {
   handleHeaderItemClick(stateName) {
     this.setState((prevState) => ({
       [stateName]: !prevState[stateName]
-    }), () => { this.state[stateName] ? this.startEventListenerByActive(stateName) : this.stopEventListenerByInActive(stateName) });
+    }), () => { this.state[stateName] ? this.startEventListenerByActive(stateName) : this.stopEventListenerByInActive(stateName)});
   }
 
   startEventListenerByActive(stateName) {
