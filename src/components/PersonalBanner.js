@@ -10,7 +10,7 @@ class PersonalContentBanner extends Component {
             <div className="col-lg-9 col-md-9 banner-left">
               <h6>This is me</h6>
               <h1>Yan Pan</h1>
-              <p>I am an front-end UI engineer, also I am a researcher. I am an front-end UI engineer, also I am a researcher. 
+              <p>I am an front-end UI engineer, also I am a researcher. I am an front-end UI engineer, also I am a researcher.
               I am an front-end UI engineer, also I am a researcher. I am an front-end UI engineer, also I am a researcher.
               I am an front-end UI engineer, also I am a researcher.
               I am an front-end UI engineer, also I am a researcher.

@@ -1,0 +1,113 @@
+ul.social_icon {
+  display: block;
+}
+
+ul.social_icon li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+ul.social_icon li a {
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  border: 1px solid #677fb5;
+  display: block;
+  line-height: 30px;
+  font-size: 15px;
+  border-radius: 5px;
+  -webkit-transition: all 400ms linear 0s;
+  -o-transition: all 400ms linear 0s;
+  transition: all 400ms linear 0s;
+  color: #677fb5;
+}
+
+ul.social_icon li:nth-child(2) a {
+  color: #70c2e9;
+  border-color: #70c2e9;
+}
+
+ul.social_icon li:nth-child(3) a {
+  color: #895a4d;
+  border-color: #895a4d;
+}
+
+ul.social_icon li:nth-child(4) a {
+  color: #d34836;
+  border-color: #d34836;
+}
+
+ul.social_icon li:nth-child(5) a {
+  color: #007ab9;
+  border-color: #007ab9;
+}
+
+ul.social_icon li:nth-child(6) a {
+  color: #d8545d;
+  border-color: #d8545d;
+}
+
+ul.social_icon li:nth-child(7) a {
+  color: #5ecbf3;
+  border-color: #5ecbf3;
+}
+
+ul.social_icon li:nth-child(8) a {
+  color: #ff3ba4;
+  border-color: #ff3ba4;
+}
+
+ul.social_icon li:last-child a {
+  color: #faaa5e;
+  border-color: #faaa5e;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+a:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+a:active, a:hover {
+  outline: 0;
+}
+
+div.person_information {
+  padding: 15px 0px 25px 0px;
+}
+
+div.person_information ul {
+  display: inline-block;
+}
+
+div.person_information ul + ul {
+  padding-left: 55px;
+}
+
+div.person_information ul li a {
+  font-size: 18px;
+  line-height: 31px;
+  color: #333333;
+  font-family: "Raleway", sans-serif;
+}
+
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+*,
+* :after, :before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
