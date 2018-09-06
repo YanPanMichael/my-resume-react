@@ -1,4 +1,6 @@
 import React, { Component, PropTypes } from 'react'
+import { CSSTransitionGroup } from 'react-transition-group' // ES6
+import PersonalHomeaboutPersonInformation from './PersonalHomeaboutPersonInformation'
 
 class PersonalContentHomeabout extends Component {
 	constructor(props) {
@@ -20,43 +22,16 @@ class PersonalContentHomeabout extends Component {
 			<section className="home-about-area pt-120">
 				<div className="container">
 					<div className="row align-items-center justify-content-between">
-						{!this.state.personalDetailFlag && <div className="col-lg-6 col-md-6 home-about-left">
-							<img className="img-fluid" src={require('../assets/img/personal/about-img.png')} alt="" />
-						</div>}
-						{this.state.personalDetailFlag && <div className="col-lg-6 col-md-6 home-about-left">
-							<div class="person_information">
-								<ul>
-									<li><a href="#">Age</a></li>
-									<li><a href="#">Nationality</a></li>
-									<li><a href="#">Address</a></li>
-									<li><a href="#">Phone</a></li>
-									<li><a href="#">Skype</a></li>
-									<li><a href="#">Email</a></li>
-									<li><a href="#">Website</a></li>
-								</ul>
-								<ul>
-									<li><a href="#">24</a></li>
-									<li><a href="#">Citizen of United States</a></li>
-									<li><a href="#">23 High Hope Blvd, Some City, Some Country</a></li>
-									<li><a href="#">+88 01911854378</a></li>
-									<li><a href="#">sumon.backpiper</a></li>
-									<li><a href="#">backpiper.com@gmail.com</a></li>
-									<li><a href="www.topsmmpanel.com">www.topsmmpanel.com</a></li>
-								</ul>
-							</div>
-							<ul class="social_icon">
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-								<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-								<li><a href="#"><i class="fa fa-skype"></i></a></li>
-								<li><a href="#"><i class="fa fa-flickr"></i></a></li>
-								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-								<li><a href="#"><i class="fa fa-rss"></i></a></li>
-							</ul>
-						</div>}
+						<div className="col-lg-6 col-md-6 home-about-left">
+
+								<img className={!this.state.personalDetailFlag ? "img-fluid fadeIn" : "img-fluid fadeOut"} src={require('../assets/img/personal/about-img.png')} alt="" />
+								<div className={this.state.personalDetailFlag ? "person_information fadeIn" : "person_information fadeOut"}>
+									<PersonalHomeaboutPersonInformation detailFlag = {this.state.personalDetailFlag} />
+								</div>
+
+						</div>
+						
+
 						<div className="col-lg-5 col-md-6 home-about-right">
 							<h6>About Me</h6>
 							<h1 className="text-uppercase">Personal Details</h1>

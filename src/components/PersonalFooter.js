@@ -28,6 +28,7 @@ class PersonalFooter extends Component {
                   <a href={"mailto:panyancsu@163.com?subject=test&cc=yanpancsu@icloud.com&body=use mailto sample"+' Copyright ' + new Date().getFullYear()}><i className="fa fa-envelope"></i></a>
                   <a href="#"><i className="fa fa-qq"></i></a>
                   <a href="#"><i className="fa fa-weixin"></i></a>
+                  <a href="#"><i className="fa fa-linkedin"></i></a>
                 </div>
               </div>
             </div>
