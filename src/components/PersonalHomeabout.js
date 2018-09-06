@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react'
-import { CSSTransitionGroup } from 'react-transition-group' // ES6
+// import { CSSTransitionGroup } from 'react-transition-group' // ES6
 import PersonalHomeaboutPersonInformation from './PersonalHomeaboutPersonInformation'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 class PersonalContentHomeabout extends Component {
 	constructor(props) {
@@ -12,25 +13,29 @@ class PersonalContentHomeabout extends Component {
 	}
 
 	togglePersonalDetail() {
-		this.setState({
-			personalDetailFlag: !this.state.personalDetailFlag
-		})
+		this.setState(prevState => ({
+			personalDetailFlag: !prevState.personalDetailFlag
+		}));
 	}
 
 	render() {
+		// const result = this.state.personalDetailFlag ? <img className="img-fluid" src={require('../assets/img/personal/about-img.png')} alt="" /> : <PersonalHomeaboutPersonInformation detailFlag = {this.state.personalDetailFlag} />
 		return (
 			<section className="home-about-area pt-120">
 				<div className="container">
 					<div className="row align-items-center justify-content-between">
 						<div className="col-lg-6 col-md-6 home-about-left">
-
-								<img className={!this.state.personalDetailFlag ? "img-fluid fadeIn" : "img-fluid fadeOut"} src={require('../assets/img/personal/about-img.png')} alt="" />
-								<div className={this.state.personalDetailFlag ? "person_information fadeIn" : "person_information fadeOut"}>
-									<PersonalHomeaboutPersonInformation detailFlag = {this.state.personalDetailFlag} />
-								</div>
-
+							{/* <ReactCSSTransitionGroup
+								transitionEnterTimeout={1000}
+								transitionLeaveTimeout={1000}
+								transitionName="slide">
+									<div className="fadeOut" key={this.state.personalDetailFlag}>
+										{<PersonalHomeaboutPersonInformation detailFlag = {this.state.personalDetailFlag} />}
+									</div>
+							</ReactCSSTransitionGroup> */}
+							<img className={`img-fluid spin-in ${this.state.personalDetailFlag?'show2':''}`} src={require('../assets/img/personal/about-img.png')} alt="" />
+							<PersonalHomeaboutPersonInformation detailFlag = {this.state.personalDetailFlag} />
 						</div>
-						
 
 						<div className="col-lg-5 col-md-6 home-about-right">
 							<h6>About Me</h6>
@@ -51,4 +56,4 @@ PersonalContentHomeabout.propTypes = {
 
 }
 
-export default PersonalContentHomeabout
+export default PersonalContentHomeabout;

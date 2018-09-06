@@ -3,7 +3,7 @@ import React, { Component, PropTypes } from 'react'
 class PersonalHomeaboutPersonInformation extends Component {
   render () {
     return (
-      <div>
+      <div className={`spin-in ${this.props.personalDetailFlag?'show2':''}`}>
         <div className="person_information">
           <ul>
             <li><a href="#">Age</a></li>
