@@ -1,41 +1,60 @@
 import React, { Component, PropTypes } from 'react'
+// import { CSSTransitionGroup } from 'react-transition-group' // ES6
+// import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 class PersonalHomeaboutPersonInformation extends Component {
+  constructor(props) {
+    super(props);
+    this.personalDetailData = {
+      'Age' : '24',
+      'Nationality' : 'Citizen of United States', 
+      'Address' : '23 High Hope Blvd, Some City, Some Country', 
+      'Phone' : '+88 01911854378', 
+      'Skype' : 'sumon.backpiper', 
+      'Email' : 'backpiper.com@gmail.com', 
+      'Website' : 'www.topsmmpanel.com',
+    }
+    this.socialDetailData = {
+      'facebook' : '#',
+      'twitter' : '#',
+      'instagram' : '#',
+      'google-plus' : '#',
+      'linkedin' : '#',
+      'pinterest' : '#',
+      'skype' : '#',
+      'flickr' : '#',
+      'dribbble' : '#',
+      'rss' : '#',
+    }
+  }
+
+  renderDifferentPart() {
+    return <div>
+      <img className={`img-fluid ${!this.props.personalDetailFlag?'fadeIn':'fadeOut'}`} src={require('../assets/img/personal/about-img.png')} alt="" />
+      <div className={`person_information ${this.props.personalDetailFlag?'fadeIn':'fadeOut'}`}>
+        <ul>
+          {Object.keys(this.personalDetailData).map(elemKey => (
+            <li><a href="#">{elemKey}</a></li>
+          ))}
+        </ul>
+        <ul>
+          {Object.keys(this.personalDetailData).map(elemKey => (
+            <li><a href="#">{this.personalDetailData[elemKey]}</a></li>
+          ))}
+        </ul>
+      </div>
+      <ul className={`social_icon ${this.props.personalDetailFlag?'fadeIn':'fadeOut'}`}>
+        {Object.keys(this.socialDetailData).map(elemKey => (
+          <li><a href={this.socialDetailData[elemKey]}><i className={`fa fa-${elemKey}`}></i></a></li>
+        ))}
+      </ul>
+    </div>
+  }
+
   render () {
     return (
-      <div className={`spin-in ${this.props.personalDetailFlag?'show2':''}`}>
-        <div className="person_information">
-          <ul>
-            <li><a href="#">Age</a></li>
-            <li><a href="#">Nationality</a></li>
-            <li><a href="#">Address</a></li>
-            <li><a href="#">Phone</a></li>
-            <li><a href="#">Skype</a></li>
-            <li><a href="#">Email</a></li>
-            <li><a href="#">Website</a></li>
-          </ul>
-          <ul>
-            <li><a href="#">24</a></li>
-            <li><a href="#">Citizen of United States</a></li>
-            <li><a href="#">23 High Hope Blvd, Some City, Some Country</a></li>
-            <li><a href="#">+88 01911854378</a></li>
-            <li><a href="#">sumon.backpiper</a></li>
-            <li><a href="#">backpiper.com@gmail.com</a></li>
-            <li><a href="www.topsmmpanel.com">www.topsmmpanel.com</a></li>
-          </ul>
-        </div>
-        <ul class="social_icon">
-          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-          <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-          <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-          <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-          <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-          <li><a href="#"><i class="fa fa-skype"></i></a></li>
-          <li><a href="#"><i class="fa fa-flickr"></i></a></li>
-          <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-          <li><a href="#"><i class="fa fa-rss"></i></a></li>
-        </ul>
+      <div>
+        {this.renderDifferentPart()}
       </div>
     )
   }
@@ -45,4 +64,4 @@ PersonalHomeaboutPersonInformation.propTypes = {
 
 }
 
-export default PersonalHomeaboutPersonInformation
+export default PersonalHomeaboutPersonInformation;
