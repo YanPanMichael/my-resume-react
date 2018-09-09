@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
 import PersonalHeader from './PersonalHeader'
-import PersonalBanner from './PersonalBanner'
-import PersonalHomeabout from './PersonalHomeabout'
+import PersonalContentBanner from './PersonalBanner'
+import PersonalContentHomeabout from './PersonalHomeabout'
+import PersonalContentServicesSection from './PersonalContentServicesSection'
+import PersonalContentBrands from './PersonalContentBrands'
+import PersonalFooter from './PersonalFooter'
 
 import '../css/App.css';
 import '../css/linearicons.css';
@@ -23,8 +26,11 @@ class App extends Component {
         <MainContainer />
         <MainPage /> */}
         <PersonalHeader />
-        <PersonalBanner />
-        <PersonalHomeabout />
+        <PersonalContentBanner />
+        <PersonalContentHomeabout />
+        <PersonalContentServicesSection />
+        <PersonalContentBrands />
+        <PersonalFooter />
       </div>
     );
   }

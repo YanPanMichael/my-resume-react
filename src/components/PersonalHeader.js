@@ -31,7 +31,7 @@ class PersonalHeader extends Component {
     if ( this.resizeTimeout ) {
       clearTimeout(this.resizeTimeout);
     }
-    this.resizeTimeout = setTimeout(() => this.actualResizeHandler(), 500);
+    this.resizeTimeout = setTimeout(() => this.actualResizeHandler(), 300);
   }
 
   actualResizeHandler() {

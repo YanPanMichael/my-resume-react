@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import { Collapse, Button, CardBody, Card } from 'reactstrap';
 
-class PersonalBanner extends Component {
+class PersonalContentBanner extends Component {
   render() {
     return (
       <section className="banner-area">
@@ -10,7 +10,7 @@ class PersonalBanner extends Component {
             <div className="col-lg-9 col-md-9 banner-left">
               <h6>This is me</h6>
               <h1>Yan Pan</h1>
-              <p>I am an front-end UI engineer, also I am a researcher. I am an front-end UI engineer, also I am a researcher. 
+              <p>I am an front-end UI engineer, also I am a researcher. I am an front-end UI engineer, also I am a researcher.
               I am an front-end UI engineer, also I am a researcher. I am an front-end UI engineer, also I am a researcher.
               I am an front-end UI engineer, also I am a researcher.
               I am an front-end UI engineer, also I am a researcher.
@@ -24,8 +24,8 @@ class PersonalBanner extends Component {
   }
 }
 
-PersonalBanner.propTypes = {
+PersonalContentBanner.propTypes = {
 
 }
 
-export default PersonalBanner
+export default PersonalContentBanner
