@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { Collapse, Button, CardBody, Card } from 'reactstrap';
+import throttle from '../utils/throttle';
 
 class PersonalContentBanner extends Component {
   constructor(props) {
@@ -8,7 +9,7 @@ class PersonalContentBanner extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener("scroll", this.scrollShowShadow, false);
+    window.addEventListener("scroll", throttle(this.scrollShowShadow, 0.5 * 1000), false);
   }
 
   scrollShowShadow() {
