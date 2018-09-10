@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import PersonalHeader from './PersonalHeader'
-import PersonalContentBanner from './PersonalBanner'
+import PersonalHeaderContainer from '../containers/PersonalHeaderContainer'
+import PersonalContentBannerContainer from '../containers/PersonalContentBannerContainer'
 import PersonalContentHomeabout from './PersonalHomeabout'
 import PersonalContentServicesSection from './PersonalContentServicesSection'
 import PersonalContentBrands from './PersonalContentBrands'
@@ -25,8 +25,8 @@ class App extends Component {
         {/* <NavBar />
         <MainContainer />
         <MainPage /> */}
-        <PersonalHeader />
-        <PersonalContentBanner />
+        <PersonalHeaderContainer />
+        <PersonalContentBannerContainer />
         <PersonalContentHomeabout />
         <PersonalContentServicesSection />
         <PersonalContentBrands />
