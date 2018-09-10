@@ -9,13 +9,13 @@ class PersonalHeader extends Component {
     this.state = {
       collapse: false
     };
-    this.toggle = this.toggle.bind(this);
+    this.toggleSecondNavBar = this.toggleSecondNavBar.bind(this);
     this.resizeThrottler = this.resizeThrottler.bind(this);
   }
 
-  toggle() {
-    this.setState({ 
-      collapse: !this.state.collapse
+  toggleSecondNavBar() {
+    this.setState((prev) => { 
+      collapse: !prev.collapse
     }, () => {this.state.collapse ? 
       this.hiddenNavbarRef.style.display='block' : 
       this.hiddenNavbarRef.style.display='none' 
@@ -42,20 +42,24 @@ class PersonalHeader extends Component {
     }
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    return nextProps.headerShadow !== this.props.headerShadow;
+  }
+
   componentWillUnmount() {
     window.removeEventListener("resize", this.resizeThrottler);
   }
 
   render() {
     return (
-      <header id="header">
+      <header id="header" className={`${this.props.headerShadow?'header-scrolled':''}`}>
         <div className="container main-menu">
           <div className="row align-items-center justify-content-between d-flex">
             <div id="logo">
               <span className="site-title">Yan Pan</span>
             </div>
             <PersonalHeaderNavbar navMenuContainerRefFun={(ref) => {this.normalNavbarRef = ref}} />
-            <div id="nav-menu-icon" className="module widget-handle mobile-toggle right visible-sm visible-xs" onClick={this.toggle}>
+            <div id="nav-menu-icon" className="module widget-handle mobile-toggle right visible-sm visible-xs" onClick={this.toggleSecondNavBar}>
               <i className="fa fa-bars"></i>
             </div>
           </div>
@@ -73,8 +77,17 @@ class PersonalHeader extends Component {
   }
 }
 
-PersonalHeader.propTypes = {
+PersonalHeader.defaultProps = {
+  headerShadow: false
+};
 
-}
+export default PersonalHeader;
 
-export default PersonalHeader
+//------- Header Scroll Class  js --------//  
+// $(window).scroll(() => {
+//   if ($(this).scrollTop() > 100) {
+//       $('#header').addClass('header-scrolled');
+//   } else {
+//       $('#header').removeClass('header-scrolled');
+//   }
+// });

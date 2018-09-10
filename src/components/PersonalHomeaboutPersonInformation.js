@@ -34,18 +34,18 @@ class PersonalHomeaboutPersonInformation extends Component {
       <div className={`person_information ${this.props.personalDetailFlag?'fadeIn':'fadeOut'}`}>
         <ul>
           {Object.keys(this.personalDetailData).map(elemKey => (
-            <li><a href="#">{elemKey}</a></li>
+            <li key={elemKey}><a href="#">{elemKey}</a></li>
           ))}
         </ul>
         <ul>
           {Object.keys(this.personalDetailData).map(elemKey => (
-            <li><a href="#">{this.personalDetailData[elemKey]}</a></li>
+            <li key={elemKey}><a href="#">{this.personalDetailData[elemKey]}</a></li>
           ))}
         </ul>
       </div>
       <ul className={`social_icon ${this.props.personalDetailFlag?'fadeIn':'fadeOut'}`}>
         {Object.keys(this.socialDetailData).map(elemKey => (
-          <li><a href={this.socialDetailData[elemKey]}><i className={`fa fa-${elemKey}`}></i></a></li>
+          <li key={elemKey}><a href={this.socialDetailData[elemKey]}><i className={`fa fa-${elemKey}`}></i></a></li>
         ))}
       </ul>
     </div>
