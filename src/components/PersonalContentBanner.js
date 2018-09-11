@@ -9,7 +9,7 @@ class PersonalContentBanner extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener("scroll", throttle(this.scrollShowShadow, 0.5 * 1000), false);
+    window.addEventListener("scroll", throttle(this.scrollShowShadow, 1 * 1000), false);
   }
 
   scrollShowShadow() {
