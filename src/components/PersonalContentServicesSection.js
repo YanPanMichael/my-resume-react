@@ -1,6 +1,11 @@
 import React, { Component, PropTypes } from 'react'
+import CountUp from 'react-countup';
 
 class PersonalContentServicesSection extends Component {
+  constructor(props) {
+    super(props);
+    this.countUpData={'Projects Completed':2536, 'Happy Clients':6784, 'Cups of Coffee':2239, 'Real Professionals':435};
+  }
   render() {
     return (
       <div>
@@ -76,22 +81,27 @@ class PersonalContentServicesSection extends Component {
         <section className="facts-area section-gap" id="facts-area">
           <div className="container">
             <div className="row">
-              <div className="col-lg-3 col-md-6 single-fact">
-                <h1 className="counter">2536</h1>
-                <p>Projects Completed</p>
-              </div>
-              <div className="col-lg-3 col-md-6 single-fact">
-                <h1 className="counter">6784</h1>
-                <p>Happy Clients</p>
-              </div>
-              <div className="col-lg-3 col-md-6 single-fact">
-                <h1 className="counter">2239</h1>
-                <p>Cups of Coffee</p>
-              </div>
-              <div className="col-lg-3 col-md-6 single-fact">
-                <h1 className="counter">435</h1>
-                <p>Real Professionals</p>
-              </div>
+              {Object.keys(this.countUpData).map(elemkey => (
+                <div className="col-lg-3 col-md-6 single-fact" key={elemkey}>
+                  <h1>
+                    <CountUp
+                      className="counter"
+                      start={0}
+                      end={this.countUpData[elemkey]}
+                      duration={5.75}
+                      separator=""
+                      decimals={0}
+                      delay={10}
+                      decimal=""
+                      prefix=""
+                      suffix=""
+                      // onEnd={() => console.log('Ended! 👏')}
+                      // onStart={() => console.log('Started! 💨')}
+                    />
+                  </h1>
+                  <p>{elemkey}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -235,4 +245,24 @@ PersonalContentServicesSection.propTypes = {
 
 }
 
-export default PersonalContentServicesSection
+export default PersonalContentServicesSection;
+
+// var options = {
+//     useEasing: true, 
+//     useGrouping: true, 
+//     separator: ',', 
+//     decimal: '.', 
+//   };
+//   var demo = new CountUp('myTargetElement', 0, 4845, 3, 22.8, options);
+//   if (!demo.error) {
+//     demo.start();
+//   } else {
+//     console.error(demo.error);
+//   }
+
+// if(document.getElementById("facts-area")){
+//   $('.counter').counterUp({
+//       delay: 10,
+//       time: 1000
+//   });
+// }
