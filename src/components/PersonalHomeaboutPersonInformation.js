@@ -17,7 +17,7 @@ class PersonalHomeaboutPersonInformation extends Component {
     this.socialDetailData = {
       'facebook' : '#',
       'twitter' : '#',
-      'instagram' : '#',
+      'github' : 'https://github.com/YanPanMichael',
       'google-plus' : '#',
       'linkedin' : '#',
       'pinterest' : '#',
@@ -45,7 +45,7 @@ class PersonalHomeaboutPersonInformation extends Component {
       </div>
       <ul className={`social_icon ${this.props.personalDetailFlag?'fadeIn':'fadeOut'}`}>
         {Object.keys(this.socialDetailData).map(elemKey => (
-          <li key={elemKey}><a href={this.socialDetailData[elemKey]}><i className={`fa fa-${elemKey}`}></i></a></li>
+          <li key={elemKey}><a href={this.socialDetailData[elemKey]} target="_blank"><i className={`fa fa-${elemKey}`}></i></a></li>
         ))}
       </ul>
     </div>
