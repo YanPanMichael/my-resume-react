@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import 'babel-polyfill'
 import PersonalHeaderContainer from '../containers/PersonalHeaderContainer'
 import PersonalContentBannerContainer from '../containers/PersonalContentBannerContainer'
 import PersonalContentHomeabout from './PersonalHomeabout'
