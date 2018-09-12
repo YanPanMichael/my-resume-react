@@ -29,6 +29,7 @@ class PersonalFooter extends Component {
                   <a href="#"><i className="fa fa-qq"></i></a>
                   <a href="#"><i className="fa fa-weixin"></i></a>
                   <a href="#"><i className="fa fa-linkedin"></i></a>
+                  <a href="https://github.com/YanPanMichael" target="_blank"><i className="fa fa-github"></i></a>
                 </div>
               </div>
             </div>
