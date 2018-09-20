@@ -49,7 +49,7 @@ class PersonalHeaderNavbar extends Component {
 
   render() {
     return (
-      <nav className="nav-menu-container" ref={this.props.navMenuContainerRefFun}>
+      <nav className="nav-menu-container" ref={this.props.navMenuContainerRefFun} onBlur={console.log('onBlur to handle click event out')}>
         <ul className="nav-menu">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>

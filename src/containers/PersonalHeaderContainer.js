@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import PersonalHeader from '../components/PersonalHeader'
+import PersonalHeader from '../components/Personal/PersonalHeader'
 
 const mapStateToProps = (state, ownProps) => ({
   headerShadow: state.headerShadow

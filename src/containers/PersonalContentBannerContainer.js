@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import PersonalContentBanner from '../components/PersonalContentBanner';
+import PersonalContentBanner from '../components/Personal/PersonalContentBanner';
 import { setHeaderShadowFlag } from '../actions';
 
 const mapStateToProps = (state) => ({})

@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react'
+import { Link } from 'react-router-dom'
 
 class PersonalHeaderDropDown extends Component {
 
@@ -7,7 +8,7 @@ class PersonalHeaderDropDown extends Component {
     return (
         <ul>
           {Object.keys(dropItemsMapArray).sort().map((elem, index) => {
-            return <li key={index}><a href={dropItemsMapArray[elem]}>{elem}</a></li>
+            return <li key={index}><Link to={dropItemsMapArray[elem]}>{elem}</Link></li>
           })}
         </ul>
     )

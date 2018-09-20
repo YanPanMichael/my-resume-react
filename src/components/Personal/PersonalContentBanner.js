@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { Collapse, Button, CardBody, Card } from 'reactstrap';
-import throttle from '../utils/throttle';
+import throttle from '../../utils/throttle';
 
 class PersonalContentBanner extends Component {
   constructor(props) {
