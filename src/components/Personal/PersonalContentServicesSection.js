@@ -133,11 +133,11 @@ class PersonalContentServicesSection extends Component {
                   <div className="relative">
                     <div className="thumb">
                       <div className="overlay overlay-bg"></div>
-                      <img className="image img-fluid" src={require('../assets/img/personal/p1.jpg')} alt="" />
+                      <img className="image img-fluid" src={require('../../assets/img/personal/p1.jpg')} alt="" />
                     </div>
-                    <a href="../assets/img/personal/p1.jpg" className="img-pop-up">
+                    <a href="../../assets/img/personal/p1.jpg" className="img-pop-up">
                       <div className="middle">
-                        <div className="text align-self-center d-flex"><img src={require('../assets/img/personal/preview.png')} alt="" /></div>
+                        <div className="text align-self-center d-flex"><img src={require('../../assets/img/personal/preview.png')} alt="" /></div>
                       </div>
                     </a>
                   </div>
@@ -150,11 +150,11 @@ class PersonalContentServicesSection extends Component {
                   <div className="relative">
                     <div className="thumb">
                       <div className="overlay overlay-bg"></div>
-                      <img className="image img-fluid" src={require('../assets/img/personal/p2.jpg')} alt="" />
+                      <img className="image img-fluid" src={require('../../assets/img/personal/p2.jpg')} alt="" />
                     </div>
-                    <a href="../assets/img/personal/p2.jpg" className="img-pop-up">
+                    <a href="../../assets/img/personal/p2.jpg" className="img-pop-up">
                       <div className="middle">
-                        <div className="text align-self-center d-flex"><img src={require('../assets/img/personal/preview.png')} alt="" /></div>
+                        <div className="text align-self-center d-flex"><img src={require('../../assets/img/personal/preview.png')} alt="" /></div>
                       </div>
                     </a>
                   </div>
@@ -167,11 +167,11 @@ class PersonalContentServicesSection extends Component {
                   <div className="relative">
                     <div className="thumb">
                       <div className="overlay overlay-bg"></div>
-                      <img className="image img-fluid" src={require('../assets/img/personal/p3.jpg')} alt="" />
+                      <img className="image img-fluid" src={require('../../assets/img/personal/p3.jpg')} alt="" />
                     </div>
-                    <a href="../assets/img/personal/p3.jpg" className="img-pop-up">
+                    <a href="../../assets/img/personal/p3.jpg" className="img-pop-up">
                       <div className="middle">
-                        <div className="text align-self-center d-flex"><img src={require('../assets/img/personal/preview.png')} alt="" /></div>
+                        <div className="text align-self-center d-flex"><img src={require('../../assets/img/personal/preview.png')} alt="" /></div>
                       </div>
                     </a>
 
@@ -185,11 +185,11 @@ class PersonalContentServicesSection extends Component {
                   <div className="relative">
                     <div className="thumb">
                       <div className="overlay overlay-bg"></div>
-                      <img className="image img-fluid" src={require('../assets/img/personal/p4.jpg')} alt="" />
+                      <img className="image img-fluid" src={require('../../assets/img/personal/p4.jpg')} alt="" />
                     </div>
-                    <a href="../assets/img/personal/p4.jpg" className="img-pop-up">
+                    <a href="../../assets/img/personal/p4.jpg" className="img-pop-up">
                       <div className="middle">
-                        <div className="text align-self-center d-flex"><img src={require('../assets/img/personal/preview.png')} alt="" /></div>
+                        <div className="text align-self-center d-flex"><img src={require('../../assets/img/personal/preview.png')} alt="" /></div>
                       </div>
                     </a>
                   </div>
@@ -202,11 +202,11 @@ class PersonalContentServicesSection extends Component {
                   <div className="relative">
                     <div className="thumb">
                       <div className="overlay overlay-bg"></div>
-                      <img className="image img-fluid" src={require('../assets/img/personal/p5.jpg')} alt="" />
+                      <img className="image img-fluid" src={require('../../assets/img/personal/p5.jpg')} alt="" />
                     </div>
-                    <a href="../assets/img/personal/p5.jpg" className="img-pop-up">
+                    <a href="../../assets/img/personal/p5.jpg" className="img-pop-up">
                       <div className="middle">
-                        <div className="text align-self-center d-flex"><img src={require('../assets/img/personal/preview.png')} alt="" /></div>
+                        <div className="text align-self-center d-flex"><img src={require('../../assets/img/personal/preview.png')} alt="" /></div>
                       </div>
                     </a>
                   </div>
@@ -219,11 +219,11 @@ class PersonalContentServicesSection extends Component {
                   <div className="relative">
                     <div className="thumb">
                       <div className="overlay overlay-bg"></div>
-                      <img className="image img-fluid" src={require('../assets/img/personal/p6.jpg')} alt="" />
+                      <img className="image img-fluid" src={require('../../assets/img/personal/p6.jpg')} alt="" />
                     </div>
-                    <a href="../assets/img/personal/p6.jpg" className="img-pop-up">
+                    <a href="../../assets/img/personal/p6.jpg" className="img-pop-up">
                       <div className="middle">
-                        <div className="text align-self-center d-flex"><img src={require('../assets/img/personal/preview.png')} alt="" /></div>
+                        <div className="text align-self-center d-flex"><img src={require('../../assets/img/personal/preview.png')} alt="" /></div>
                       </div>
                     </a>
                   </div>
