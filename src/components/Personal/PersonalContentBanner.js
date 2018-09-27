@@ -34,8 +34,7 @@ class PersonalContentBanner extends Component {
               <h1>Yan Pan</h1>
               <p>I am an front-end UI engineer, also I am a researcher. I am an front-end UI engineer, also I am a researcher.
               I am an front-end UI engineer, also I am a researcher. I am an front-end UI engineer, also I am a researcher.
-              I am an front-end UI engineer, also I am a researcher.
-              I am an front-end UI engineer, also I am a researcher.
+              I am an front-end UI engineer, also I am a researcher. I work in CITI for more than two years.
               </p>
               <a href="#" className="primary-btn text-uppercase">discover now</a>
             </div>
