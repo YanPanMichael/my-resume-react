@@ -32,8 +32,14 @@ class PersonalContentBanner extends Component {
             <div className="col-lg-9 col-md-9 banner-left">
               <h6>This is me</h6>
               <h1>Yan Pan</h1>
-              <p>I am an front-end UI engineer, also I am a researcher. I am an front-end UI engineer, also I am a researcher.
-              I am an front-end UI engineer, also I am a researcher. Excellent Intern Award. I work in CITI for more than two years.
+              <p>I am an front-end UI engineer, also I am a researcher.
+                Patent:An method of mining influence maximized initial users based on node features 201510072839.0
+                Patent:An method which considering time constraint to identify initial key nodes in social networks. 201510562450.4
+                Thesis:Credit Distribution and Influence Maximization in Online Social Networks Using Node Features. $ICNC-FSKD$ IEEE
+                Thesis:An model based on time constraint for influence maximized credit distribution $HHME$ CCF
+                Thesis:A weighted network model based on the correlation degree between nodes. $MSN$ IEEE
+                Thesis:Credit Distribution for Influence Maximization in Online Social Networks with Time Constraint. $SocialCom$ IEEE
+                Excellent Intern Award. I work in CITI for more than two years.
               </p>
               <a href="#" className="primary-btn text-uppercase">discover now</a>
             </div>
