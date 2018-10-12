@@ -11,6 +11,7 @@ import rootReducer from './reducers'
 import './index.css'
 import App from './components/App'
 import Elements from './components/Elements/Elements'
+import Pdf from './components/PDF/Pdf'
 // import registerServiceWorker from './registerServiceWorker'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -44,6 +45,7 @@ ReactDOM.render(
       <div>
         <Route path='/' component={App} />
         <Route path='/elements' component={Elements} />
+        <Route path='/Pdf/Pdf.html' component={Pdf} />
       </div>
     </BrowserRouter>
   </Provider>,
