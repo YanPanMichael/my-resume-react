@@ -4,14 +4,14 @@ import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk'
 import { Provider } from 'react-redux'
 // import { Router, Route, Switch, browserHistory } from 'react-router'
-import { BrowserRouter, Link, Route } from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
 import { createLogger } from 'redux-logger'
 import rootReducer from './reducers'
 import './index.css'
 import App from './components/App'
 import Elements from './components/Elements/Elements'
-import Pdf from './components/PDF/Pdf'
+import ResumePDF from './components/PDF/ResumePDF'
 // import registerServiceWorker from './registerServiceWorker'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -43,9 +43,9 @@ ReactDOM.render(
     </Router> */}
     <BrowserRouter>
       <div>
-        <Route path='/' component={App} />
+        <Route path='/my-resume' component={App} />
+        <Route path='/resume-pdf' component={ResumePDF} />
         <Route path='/elements' component={Elements} />
-        <Route path='/Pdf/Pdf.html' component={Pdf} />
       </div>
     </BrowserRouter>
   </Provider>,
