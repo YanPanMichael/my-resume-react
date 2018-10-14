@@ -53,8 +53,8 @@ class PersonalHeaderNavbar extends Component {
       <nav className="nav-menu-container" ref={this.props.navMenuContainerRefFun} onBlur={console.log('onBlur to handle click event out')}>
         <ul className="nav-menu">
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
           <li><NavLink to="/resume-pdf/">Resume</NavLink></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="price.html">Pricing</a></li>
           <li className="menu-has-children" ref={(node) => { this.wrapperBlogRef = node }}>

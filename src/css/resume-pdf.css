@@ -1,3 +1,12 @@
-.pdf-resume-document > * {
+div.pdf-resume-document canvas:first-child,
+div.pdf-resume-document p {
+  margin: auto;
+}
+
+div.pdf-resume-document .pdf-resume-loading {
+  text-align: center;
+  position: relative;
+  display: block;
+  top: 50px;
   margin: auto;
 }
