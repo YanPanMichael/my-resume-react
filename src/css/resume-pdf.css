@@ -1,12 +1,25 @@
-div.pdf-resume-document canvas:first-child,
-div.pdf-resume-document p {
+.pdf-resume div.pdf-resume-document canvas:first-child,
+.pdf-resume div.pdf-resume-document p {
   margin: auto;
+  margin-top: 30px;
 }
 
-div.pdf-resume-document .pdf-resume-loading {
+.pdf-resume div.pdf-resume-document .pdf-resume-loading {
   text-align: center;
   position: relative;
   display: block;
   top: 50px;
   margin: auto;
+}
+
+.pdf-resume div.pdf-resume-document div > canvas {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 50px 0 rgba(16, 36, 94, 0.2);
+}
+
+.pdf-resume .pdf-resume-bottom-pages {
+  text-align: center;
+  font-size: 1.5em;
+  margin-top: 1rem;
 }

@@ -19,7 +19,7 @@ class ResumePDF extends Component {
     const { pageNumber, numPages } = this.state;
 
     return (
-      <div>
+      <div className="pdf-resume">
         <Document
           className="pdf-resume-document"
           file={require('../../assets/pdf/panyan_english_version.pdf')}
@@ -31,9 +31,10 @@ class ResumePDF extends Component {
           <Page
             pageNumber={pageNumber}
             onLoadError={(error) => alert('Error while retreiving the outline! ' + error.message)}
+            scale="1.5"
            />
         </Document>
-        {numPages && <p style={{"text-align":"center"}}>Page {pageNumber} of {numPages}</p>}
+        {numPages && <p className="pdf-resume-bottom-pages">Page {pageNumber} of {numPages}</p>}
       </div>
     );
   }
