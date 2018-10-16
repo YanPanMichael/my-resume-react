@@ -1,21 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
-import thunk from 'redux-thunk'
-import { Provider } from 'react-redux'
+import {
+  createStore,
+  combineReducers,
+  applyMiddleware,
+  compose,
+} from 'redux';
+import thunk from 'redux-thunk';
+import { Provider } from 'react-redux';
 // import { Router, Route, Switch, browserHistory } from 'react-router'
-import { BrowserRouter, Route } from 'react-router-dom'
-import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
-import { createLogger } from 'redux-logger'
-import rootReducer from './reducers'
-import './index.css'
-import App from './components/App'
-import Elements from './components/Elements/Elements'
-import ResumePDF from './components/PDF/ResumePDF'
-// import registerServiceWorker from './registerServiceWorker'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import { BrowserRouter, Route } from 'react-router-dom';
+import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
+import { createLogger } from 'redux-logger';
+import rootReducer from './reducers';
+import './index.css';
+import App from './components/App';
+import Elements from './components/Elements/Elements';
+import ResumePDF from './components/PDF/ResumePDF';
+// import registerServiceWorker from './registerServiceWorker';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-var middlewares = [thunk];
+const middlewares = [thunk];
 if (process.env.NODE_ENV !== 'production') {
   middlewares.push(createLogger());
 }
@@ -26,9 +31,9 @@ if (process.env.NODE_ENV !== 'production') {
 const store = compose(applyMiddleware(...middlewares))(createStore)(
   combineReducers({
     ...rootReducer,
-    routing: routerReducer
-  })
-)
+    routing: routerReducer,
+  }),
+);
 
 // Create an enhanced history that syncs navigation events with the store
 // const history = syncHistoryWithStore(browserHistory, store)
@@ -49,6 +54,6 @@ ReactDOM.render(
       </div>
     </BrowserRouter>
   </Provider>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
 // registerServiceWorker();

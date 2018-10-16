@@ -54,7 +54,7 @@ class PersonalHeaderNavbar extends Component {
         <ul className="nav-menu">
           <li><a href="index.html">Home</a></li>
           <li><NavLink to="/resume-pdf/">Resume</NavLink></li>
-          <li><a href="about.html">About</a></li>
+          <li><NavLink to="/elements/">Elements</NavLink></li>
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="price.html">Pricing</a></li>
           <li className="menu-has-children" ref={(node) => { this.wrapperBlogRef = node }}>
