@@ -8,7 +8,7 @@ class ResumePDF extends Component {
     this.state = {
       numPages: null,
       pageNumber: 1,
-    }
+    };
   }
 
   onDocumentLoadSuccess = ({ numPages }) => {
@@ -42,6 +42,6 @@ class ResumePDF extends Component {
 
 ResumePDF.propTypes = {
 
-}
+};
 
 export default ResumePDF;

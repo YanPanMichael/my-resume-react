@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
@@ -37,36 +37,8 @@ class PersonalContentBrands extends Component {
           </div>
         </div>
       </section>
-    )
+    );
   }
 }
 
-PersonalContentBrands.propTypes = {
-
-}
-
 export default PersonalContentBrands;
-
-// $('.active-brand-carusel').owlCarousel({
-//   items: 5,
-//   loop: true,
-//   autoplayHoverPause: true,
-//   autoplay: true,
-//   responsive: {
-//       0: {
-//           items: 1
-//       },
-//       455: {
-//           items: 2
-//       },            
-//       768: {
-//           items: 3,
-//       },
-//       991: {
-//           items: 4,
-//       },
-//       1024: {
-//           items: 5,
-//       }
-//   }
-// }); 
