@@ -1,5 +1,5 @@
-import React, { Component, PropTypes } from 'react'
-import PersonalHomeaboutPersonInformation from './PersonalHomeaboutPersonInformation'
+import React, { Component, PropTypes } from 'react';
+import PersonalHomeaboutPersonInformation from './PersonalHomeaboutPersonInformation';
 
 class PersonalContentHomeabout extends Component {
 	constructor(props) {
@@ -30,7 +30,7 @@ class PersonalContentHomeabout extends Component {
 							<p>
 								Here, I focus on a range of items and features that we use in life without giving them a second thought. such as Coca Cola. Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
 							</p>
-							<button className="primary-btn text-uppercase" onClick={this.togglePersonalDetail}>View Full Details</button>
+							<button type="button" className="primary-btn text-uppercase" style={{ borderRadius: 8 }} onClick={this.togglePersonalDetail}>View Full Details</button>
 						</div>
 					</div>
 				</div>
