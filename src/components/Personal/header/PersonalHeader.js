@@ -17,9 +17,8 @@ class PersonalHeader extends Component {
     window.addEventListener('resize', this.resizeThrottler, false);
   }
 
-  shouldComponentUpdate(nextProps) {
-    const { headerShadow } = this.props;
-    return nextProps.headerShadow !== headerShadow;
+  shouldComponentUpdate(nextProps, nextState) {
+    return nextProps.headerShadow !== this.props.headerShadow;
   }
 
   componentWillUnmount() {
@@ -29,9 +28,10 @@ class PersonalHeader extends Component {
   toggleSecondNavBar() {
     this.setState((prev) => {
       collapse: !prev.collapse
-    }, () => {this.state.collapse ?
-      this.hiddenNavbarRef.style.display='block'
-      : this.hiddenNavbarRef.style.display='none' 
+    }, () => {
+      this.state.collapse ?
+      this.hiddenNavbarRef.style.display = 'block' :
+      this.hiddenNavbarRef.style.display = 'none'
     });
   }
 
@@ -52,28 +52,24 @@ class PersonalHeader extends Component {
   }
 
   render() {
-    const { headerShadow } = this.props;
-    const { collapse } = this.state;
     return (
-      <header id="header" className={`${headerShadow ? 'header-scrolled' : ''}`}>
+      <header id="header" className={`${this.props.headerShadow ? 'header-scrolled' : ''}`}>
         <div className="container main-menu">
           <div className="row align-items-center justify-content-between d-flex">
             <div id="logo">
               <span className="site-title">Yan Pan</span>
             </div>
-            <PersonalHeaderNavbar navMenuContainerRefFun={(ref) => { this.normalNavbarRef = ref; }} />
-            <div id="nav-menu-icon" className="module widget-handle mobile-toggle right visible-sm visible-xs" onClick={ this.toggleSecondNavBar }>
-              <i className="fa fa-bars" />
+            <PersonalHeaderNavbar navMenuContainerRefFun={(ref) => { this.normalNavbarRef = ref }} />
+            <div id="nav-menu-icon" className="module widget-handle mobile-toggle right visible-sm visible-xs" onClick={this.toggleSecondNavBar}>
+              <i className="fa fa-bars"></i>
             </div>
           </div>
-          <Collapse isOpen={collapse}>
+          <Collapse isOpen={this.state.collapse}>
             <div className="row align-items-center justify-content-between d-flex">
               <div id="logo">
-                <span className="site-title" />
+                <span className="site-title"></span>
               </div>
-              <PersonalHeaderNavbar
-                navMenuContainerRefFun={(ref) => { this.hiddenNavbarRef = ref; }}
-              />
+              <PersonalHeaderNavbar navMenuContainerRefFun={(ref) => { this.hiddenNavbarRef = ref }} />
             </div>
           </Collapse>
         </div>
