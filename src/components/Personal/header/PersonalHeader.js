@@ -18,7 +18,9 @@ class PersonalHeader extends Component {
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    return nextProps.headerShadow !== this.props.headerShadow;
+    const { headerShadow } = this.props;
+    const { collapse } = this.state;
+    return nextProps.headerShadow !== headerShadow || nextState.collapse !== collapse;
   }
 
   componentWillUnmount() {
@@ -26,8 +28,8 @@ class PersonalHeader extends Component {
   }
 
   toggleSecondNavBar() {
-    this.setState((prev) => {
-      collapse: !prev.collapse
+    this.setState({
+      collapse: !this.state.collapse
     }, () => {
       this.state.collapse ?
       this.hiddenNavbarRef.style.display = 'block' :
@@ -52,24 +54,30 @@ class PersonalHeader extends Component {
   }
 
   render() {
+    const { headerShadow } = this.props;
+    const { collapse } = this.state;
     return (
-      <header id="header" className={`${this.props.headerShadow ? 'header-scrolled' : ''}`}>
+      <header id="header" className={`${headerShadow ? 'header-scrolled' : ''}`}>
         <div className="container main-menu">
           <div className="row align-items-center justify-content-between d-flex">
             <div id="logo">
               <span className="site-title">Yan Pan</span>
             </div>
-            <PersonalHeaderNavbar navMenuContainerRefFun={(ref) => { this.normalNavbarRef = ref }} />
+            <PersonalHeaderNavbar
+              navMenuContainerRefFun={(ref) => { this.normalNavbarRef = ref; }}
+            />
             <div id="nav-menu-icon" className="module widget-handle mobile-toggle right visible-sm visible-xs" onClick={this.toggleSecondNavBar}>
-              <i className="fa fa-bars"></i>
+              <i className="fa fa-bars" />
             </div>
           </div>
-          <Collapse isOpen={this.state.collapse}>
+          <Collapse isOpen={collapse}>
             <div className="row align-items-center justify-content-between d-flex">
               <div id="logo">
-                <span className="site-title"></span>
+                <span className="site-title" />
               </div>
-              <PersonalHeaderNavbar navMenuContainerRefFun={(ref) => { this.hiddenNavbarRef = ref }} />
+              <PersonalHeaderNavbar
+                navMenuContainerRefFun={(ref) => { this.hiddenNavbarRef = ref; }}
+              />
             </div>
           </Collapse>
         </div>
