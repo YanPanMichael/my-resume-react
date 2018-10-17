@@ -9,9 +9,10 @@ class ResumePDF extends Component {
       numPages: null,
       pageNumber: 1,
     };
+    this.onDocumentLoadSuccess = this.onDocumentLoadSuccess.bind(this);
   }
 
-  onDocumentLoadSuccess = ({ numPages }) => {
+  onDocumentLoadSuccess({ numPages }) {
     this.setState({ numPages });
   }
 
@@ -22,26 +23,24 @@ class ResumePDF extends Component {
       <div className="pdf-resume">
         <Document
           className="pdf-resume-document"
+          /* eslint-disable global-require */
           file={require('../../assets/pdf/panyan_english_version.pdf')}
           onLoadSuccess={this.onDocumentLoadSuccess}
           loading={<div className="pdf-resume-loading">Please wait!</div>}
-          onLoadError={(error) => alert('Error while loading pages! ' + error.message)}
+          onLoadError={error => alert(`Error while loading pages! ${error.message}`)}
           noData="Please select a file."
         >
           <Page
             pageNumber={pageNumber}
-            onLoadError={(error) => alert('Error while retreiving the outline! ' + error.message)}
+            onLoadError={error => alert(`Error while retreiving the outline! ${error.message}`)}
             scale="1.5"
-           />
+          />
         </Document>
-        {numPages && <p className="pdf-resume-bottom-pages">Page {pageNumber} of {numPages}</p>}
+        {numPages
+          && <p className="pdf-resume-bottom-pages">Page {pageNumber} of {numPages}</p>}
       </div>
     );
   }
 }
-
-ResumePDF.propTypes = {
-
-};
 
 export default ResumePDF;

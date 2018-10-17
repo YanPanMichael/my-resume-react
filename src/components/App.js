@@ -5,7 +5,7 @@ import PersonalContentBannerContainer from '../containers/PersonalContentBannerC
 import PersonalContentHomeabout from './Personal/PersonalHomeabout';
 import PersonalContentServicesSection from './Personal/PersonalContentServicesSection';
 import PersonalContentBrands from './Personal/PersonalContentBrands';
-import PersonalFooter from './Personal/PersonalFooter';
+import PersonalFooter from './Personal/footer/PersonalFooter';
 
 import '../css/App.css';
 import '../css/linearicons.css';

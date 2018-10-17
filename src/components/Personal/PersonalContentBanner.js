@@ -44,7 +44,7 @@ class PersonalContentBanner extends Component {
                 Thesis:Credit Distribution for Influence Maximization in Online Social Networks with Time Constraint. $SocialCom$ IEEE
                 Excellent Intern Award. I work in CITI for more than two years.
               </p>
-              <a href='' className="primary-btn text-uppercase">discover now</a>
+              <button type="button" style={{ 'border-radius': '8px' }} className="primary-btn text-uppercase">discover now</button>
             </div>
           </div>
         </div>
