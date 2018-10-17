@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 // import { Collapse, Button, CardBody, Card } from 'reactstrap';
-import throttle from '../../utils/throttle';
+import throttle from '../../../utils/throttle';
 
 class PersonalContentBanner extends Component {
   constructor(props) {
@@ -44,7 +44,7 @@ class PersonalContentBanner extends Component {
                 Thesis:Credit Distribution for Influence Maximization in Online Social Networks with Time Constraint. $SocialCom$ IEEE
                 Excellent Intern Award. I work in CITI for more than two years.
               </p>
-              <a href='' className="primary-btn text-uppercase">discover now</a>
+              <button type="button" style={{ borderRadius: 8 }} className="primary-btn text-uppercase">discover now</button>
             </div>
           </div>
         </div>

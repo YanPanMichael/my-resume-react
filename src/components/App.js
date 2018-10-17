@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import 'babel-polyfill';
 import PersonalHeaderContainer from '../containers/PersonalHeaderContainer';
 import PersonalContentBannerContainer from '../containers/PersonalContentBannerContainer';
-import PersonalContentHomeabout from './Personal/PersonalHomeabout';
-import PersonalContentServicesSection from './Personal/PersonalContentServicesSection';
-import PersonalContentBrands from './Personal/PersonalContentBrands';
-import PersonalFooter from './Personal/PersonalFooter';
+import PersonalContentHomeabout from './Personal/body/PersonalHomeabout';
+import PersonalContentServicesSection from './Personal/body/PersonalContentServicesSection';
+import PersonalContentBrands from './Personal/body/PersonalContentBrands';
+import PersonalFooter from './Personal/footer/PersonalFooter';
 
 import '../css/App.css';
 import '../css/linearicons.css';

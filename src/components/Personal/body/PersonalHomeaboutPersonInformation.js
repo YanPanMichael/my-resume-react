@@ -30,7 +30,7 @@ class PersonalHomeaboutPersonInformation extends Component {
 
   renderDifferentPart() {
     return <div className="left-part-container">
-      <img className={`img-fluid ${!this.props.personalDetailFlag?'fadeIn':'fadeOut'}`} src={require('../../assets/img/personal/about-img.png')} alt="" />
+      <img className={`img-fluid ${!this.props.personalDetailFlag?'fadeIn':'fadeOut'}`} src={require('../../../assets/img/personal/about-img.png')} alt="" />
       <div className={`detail-absolute ${this.props.personalDetailFlag?'fadeIn':'fadeOut'}`}>
         <div className={'person_information'}>
           <ul>

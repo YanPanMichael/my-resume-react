@@ -10,7 +10,8 @@ import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 // import { Router, Route, Switch, browserHistory } from 'react-router'
 import { BrowserRouter, Route } from 'react-router-dom';
-import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
+// import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
+import { routerReducer } from 'react-router-redux';
 import { createLogger } from 'redux-logger';
 import rootReducer from './reducers';
 import './index.css';
@@ -48,9 +49,9 @@ ReactDOM.render(
     </Router> */}
     <BrowserRouter>
       <div>
-        <Route path='/my-resume' component={App} />
-        <Route path='/resume-pdf' component={ResumePDF} />
-        <Route path='/elements' component={Elements} />
+        <Route path="/my-resume" component={App} />
+        <Route path="/resume-pdf" component={ResumePDF} />
+        <Route path="/elements" component={Elements} />
       </div>
     </BrowserRouter>
   </Provider>,

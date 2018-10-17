@@ -19,19 +19,19 @@ class PersonalContentBrands extends Component {
               nav
             >
               <div className="col single-brand">
-                <a href="#"><img className="mx-auto" src={require('../../assets/img/personal/l1.png')} alt="" /></a>
+                <a href="#"><img className="mx-auto" src={require('../../../assets/img/personal/l1.png')} alt="" /></a>
               </div>
               <div className="col single-brand">
-                <a href="#"><img className="mx-auto" src={require('../../assets/img/personal/l2.png')} alt="" /></a>
+                <a href="#"><img className="mx-auto" src={require('../../../assets/img/personal/l2.png')} alt="" /></a>
               </div>
               <div className="col single-brand">
-                <a href="#"><img className="mx-auto" src={require('../../assets/img/personal/l3.png')} alt="" /></a>
+                <a href="#"><img className="mx-auto" src={require('../../../assets/img/personal/l3.png')} alt="" /></a>
               </div>
               <div className="col single-brand">
-                <a href="#"><img className="mx-auto" src={require('../../assets/img/personal/l4.png')} alt="" /></a>
+                <a href="#"><img className="mx-auto" src={require('../../../assets/img/personal/l4.png')} alt="" /></a>
               </div>
               <div className="col single-brand">
-                <a href="#"><img className="mx-auto" src={require('../../assets/img/personal/l5.png')} alt="" /></a>
+                <a href="#"><img className="mx-auto" src={require('../../../assets/img/personal/l5.png')} alt="" /></a>
               </div>
             </OwlCarousel>
           </div>
