@@ -29,8 +29,9 @@ class PersonalHeader extends Component {
   toggleSecondNavBar() {
     this.setState((prev) => {
       collapse: !prev.collapse
-    }, () => {
-      this.state.collapse ? this.hiddenNavbarRef.style.display='block' : this.hiddenNavbarRef.style.display='none' 
+    }, () => {this.state.collapse ?
+      this.hiddenNavbarRef.style.display='block'
+      : this.hiddenNavbarRef.style.display='none' 
     });
   }
 
