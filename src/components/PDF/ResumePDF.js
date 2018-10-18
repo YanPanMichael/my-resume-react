@@ -20,10 +20,10 @@ class ResumePDF extends Component {
     const { pageNumber, numPages } = this.state;
 
     return (
+      /* eslint-disable global-require */
       <div className="pdf-resume">
         <Document
           className="pdf-resume-document"
-          /* eslint-disable global-require */
           file={require('../../assets/pdf/panyan_english_version.pdf')}
           onLoadSuccess={this.onDocumentLoadSuccess}
           loading={<div className="pdf-resume-loading">Please wait!</div>}
