@@ -5,6 +5,7 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 
 class PersonalContentBrands extends Component {
   render() {
+    /* eslint-disable global-require */
     return (
       <section className="brands-area">
         <div className="container">
@@ -13,9 +14,9 @@ class PersonalContentBrands extends Component {
               className="row align-items-center active-brand-carusel justify-content-start no-gutters"
               loop
               items={5}
-              autoplay={true}
+              autoplay="true"
               autoplayTimeout={5000}
-              autoplayHoverPause={true}
+              autoplayHoverPause="true"
               nav
             >
               <div className="col single-brand">

@@ -28,12 +28,11 @@ class PersonalHeader extends Component {
   }
 
   toggleSecondNavBar() {
-    this.setState({
-      collapse: !this.state.collapse
-    }, () => {
-      this.state.collapse ?
-      this.hiddenNavbarRef.style.display = 'block' :
-      this.hiddenNavbarRef.style.display = 'none'
+    this.setState(prevState => ({
+      collapse: !prevState.collapse,
+    }), () => {
+      const { collapse } = this.state;
+      this.hiddenNavbarRef.style.display = collapse ? 'block' : 'none';
     });
   }
 
@@ -66,7 +65,7 @@ class PersonalHeader extends Component {
             <PersonalHeaderNavbar
               navMenuContainerRefFun={(ref) => { this.normalNavbarRef = ref; }}
             />
-            <div id="nav-menu-icon" className="module widget-handle mobile-toggle right visible-sm visible-xs" onClick={this.toggleSecondNavBar}>
+            <div id="nav-menu-icon" className="module widget-handle mobile-toggle right visible-sm visible-xs" onClick={this.toggleSecondNavBar} onKeyUp={this.toggleSecondNavBar}>
               <i className="fa fa-bars" />
             </div>
           </div>
