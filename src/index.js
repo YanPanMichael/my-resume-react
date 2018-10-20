@@ -18,6 +18,7 @@ import './index.css';
 import App from './components/App';
 import Elements from './components/Elements/Elements';
 import ResumePDF from './components/PDF/ResumePDF';
+import MainPage from './components/MainPage';
 // import registerServiceWorker from './registerServiceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -52,6 +53,7 @@ ReactDOM.render(
         <Route path="/my-resume" component={App} />
         <Route path="/resume-pdf" component={ResumePDF} />
         <Route path="/elements" component={Elements} />
+        <Route path="/main-page" component={MainPage} />
       </div>
     </BrowserRouter>
   </Provider>,

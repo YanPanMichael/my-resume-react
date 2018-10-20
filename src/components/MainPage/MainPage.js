@@ -1,5 +1,5 @@
-import React, { Component, PropTypes } from 'react'
-import * as mainpageStyle from './MainPage.css'
+import React, { Component } from 'react';
+import './MainPage.css';
 
 class MainPage extends Component {
   render() {
@@ -11,10 +11,9 @@ class MainPage extends Component {
               <a className="l aiy" href="">
                 <strong>go</strong>
               </a>
-              <button className="qv" data-target="#stage" data-toggle="stage" data-distance="-250">
-                <span className="qw"></span>
+              <button type="button" className="qv" data-target="#stage" data-toggle="stage" data-distance="-250">
+                <span className="qw" />
               </button>
-
               <div className="d-none wx axv">
                 <ul className="navbar-nav">
                   <li className="m ahq ">
@@ -34,25 +33,21 @@ class MainPage extends Component {
             </nav>
           </div>
 
-          <img className="main-page-bg-index" src={require('../../assets/img/startup-0.svg')} alt="" />
-
           <div className="bqg ait">
             <div className="e">
               <div className="c">
                 <div className="fv gt">
                   <h1 className="bsf bsg">Analytics on demand.</h1>
                   <p className="al agw an">Stop installing bloated scripts that all track the exact same things. Install one that does everything.</p>
-                  <button className="dm ox ap">Try it now</button>
+                  <button type="button" className="dm ox ap">Try it now</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
-MainPage.propTypes = {}
-
-export default MainPage
+export default MainPage;
