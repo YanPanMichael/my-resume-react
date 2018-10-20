@@ -15,9 +15,16 @@ class PersonalHeaderNavbar extends Component {
   }
 
   handleHeaderItemClick(stateName) {
-    this.setState((prevState) => ({
-      [stateName]: !prevState[stateName]
-    }), () => { this.state[stateName] ? this.startEventListenerByActive(stateName) : this.stopEventListenerByInActive(stateName)});
+    this.setState(prevState => ({
+      [stateName]: !prevState[stateName],
+    }), () => {
+      const { twoStates } = this.state;
+      if (twoStates[stateName]) {
+        this.startEventListenerByActive(stateName);
+      } else {
+        this.stopEventListenerByInActive(stateName);
+      }
+    });
   }
 
   startEventListenerByActive(stateName) {
@@ -57,8 +64,8 @@ class PersonalHeaderNavbar extends Component {
           <li><a href="index.html">Home</a></li>
           <li><NavLink to="/resume-pdf/">Resume</NavLink></li>
           <li><NavLink to="/elements/">Elements</NavLink></li>
+          <li><NavLink to="/main-page/">MainPage</NavLink></li>
           <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="price.html">Pricing</a></li>
           <li className="menu-has-children" ref={(node) => { this.wrapperBlogRef = node; }}>
             <a href="javascript:void(0)" onClick={() => this.handleHeaderItemClick('blogdropdownOpen')}>Blog</a>
             {blogdropdownOpen && <PersonalHeaderDropDown dropItemsMapArray={{ 'Page 1': 'page1.html', 'Page 2': 'page2.html' }} />}
