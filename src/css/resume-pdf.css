@@ -1,7 +1,8 @@
 .pdf-resume div.pdf-resume-document canvas:first-child,
 .pdf-resume div.pdf-resume-document p {
   margin: auto;
-  margin-top: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .pdf-resume div.pdf-resume-document .pdf-resume-loading {
@@ -20,6 +21,6 @@
 
 .pdf-resume .pdf-resume-bottom-pages {
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin-top: 1rem;
 }
