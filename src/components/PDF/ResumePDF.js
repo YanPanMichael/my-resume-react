@@ -7,7 +7,6 @@ class ResumePDF extends Component {
     super(props);
     this.state = {
       numPages: null,
-      pageNumber: 1,
     };
     this.onDocumentLoadSuccess = this.onDocumentLoadSuccess.bind(this);
   }
@@ -17,7 +16,7 @@ class ResumePDF extends Component {
   }
 
   render() {
-    const { pageNumber, numPages } = this.state;
+    const { numPages } = this.state;
 
     return (
       /* eslint-disable global-require */
@@ -30,14 +29,18 @@ class ResumePDF extends Component {
           onLoadError={error => alert(`Error while loading pages! ${error.message}`)}
           noData="Please select a file."
         >
-          <Page
-            pageNumber={pageNumber}
-            onLoadError={error => alert(`Error while retreiving the outline! ${error.message}`)}
-            scale="1.5"
-          />
+          {Array.from(new Array(numPages), (el, index) => (
+            <div>
+              <Page
+                key={`page_${index + 1}`}
+                pageNumber={index + 1}
+                onLoadError={error => alert(`Error while retreiving the outline! ${error.message}`)}
+                scale="1.5"
+              />
+              <p className="pdf-resume-bottom-pages">Page {index + 1} of {numPages}</p>
+            </div>
+          ))}
         </Document>
-        {numPages
-          && <p className="pdf-resume-bottom-pages">Page {pageNumber} of {numPages}</p>}
       </div>
     );
   }
