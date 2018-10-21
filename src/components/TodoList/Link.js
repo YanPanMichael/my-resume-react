@@ -6,6 +6,7 @@ class Link extends Component {
     const { active, children, onClick } = this.props;
     return (
       <button
+        type="button"
         onClick={onClick}
         disabled={active}
         style={{
