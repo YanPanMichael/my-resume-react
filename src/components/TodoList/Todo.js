@@ -6,12 +6,13 @@ class Todo extends Component {
     const { onClick, completed, text } = this.props;
     return (
       <li
-        onClick={onClick}
         style={{
-          textDecoration: completed ? 'line-through' : 'none'
+          textDecoration: completed ? 'line-through' : 'none',
         }}
       >
-        {text}
+        <div onClick={onClick} onKeyUp={onClick}>
+          {text}
+        </div>
       </li>
     );
   }

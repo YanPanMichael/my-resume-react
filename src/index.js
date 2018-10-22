@@ -19,6 +19,7 @@ import App from './components/App';
 import Elements from './components/Elements/Elements';
 import ResumePDF from './components/PDF/ResumePDF';
 import MainPage from './components/MainPage';
+import TodoListPage from './components/TodoList';
 // import registerServiceWorker from './registerServiceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -54,6 +55,7 @@ ReactDOM.render(
         <Route path="/resume-pdf" component={ResumePDF} />
         <Route path="/elements" component={Elements} />
         <Route path="/main-page" component={MainPage} />
+        <Route path="/todo-page" component={TodoListPage} />
       </div>
     </BrowserRouter>
   </Provider>,

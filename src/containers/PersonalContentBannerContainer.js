@@ -2,12 +2,13 @@ import { connect } from 'react-redux';
 import PersonalContentBanner from '../components/Personal/body/PersonalContentBanner';
 import { setHeaderShadowFlag } from '../actions';
 
-const mapStateToProps = (state) => ({})
+const mapStateToProps = state => ({});
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  updateHeaderShadow: (boolValue) => {
-    dispatch(setHeaderShadowFlag(boolValue));
-  }
-})
+  updateHeaderShadow: boolValue => dispatch(setHeaderShadowFlag(boolValue)),
+});
 
-export default connect(mapStateToProps, mapDispatchToProps)(PersonalContentBanner);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(PersonalContentBanner);

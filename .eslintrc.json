@@ -35,6 +35,8 @@
     "import/no-extraneous-dependencies": 0,
     "no-script-url": 0,
     "react/forbid-prop-types": ["enabled", { "forbid": ["string"] }],
+    "prettier/prettier": 0,
+    "no-plusplus": 0,
     // "no-bitwise": ["error", { "allow": ["<<", "&=", "++", "|"], "int32Hint": true}],
     "semi": [
       "error",
@@ -48,6 +50,7 @@
       }
     ]
   },
+  "plugins": ["prettier"],
   "globals": {
     "document": true,
     "foo": true,
