@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {
   createStore,
-  combineReducers,
   applyMiddleware,
   compose,
 } from 'redux';
@@ -11,7 +10,6 @@ import { Provider } from 'react-redux';
 // import { Router, Route, Switch, browserHistory } from 'react-router'
 import { BrowserRouter, Route } from 'react-router-dom';
 // import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
-import { routerReducer } from 'react-router-redux';
 import { createLogger } from 'redux-logger';
 import rootReducer from './reducers';
 import './index.css';
@@ -31,12 +29,7 @@ if (process.env.NODE_ENV !== 'production') {
 // 柯里化
 // https://segmentfault.com/a/1190000008754562
 // Add the reducer to your store on the `routing` key
-const store = compose(applyMiddleware(...middlewares))(createStore)(
-  combineReducers({
-    ...rootReducer,
-    routing: routerReducer,
-  }),
-);
+const store = compose(applyMiddleware(...middlewares))(createStore)(rootReducer);
 
 // Create an enhanced history that syncs navigation events with the store
 // const history = syncHistoryWithStore(browserHistory, store)
