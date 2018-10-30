@@ -18,7 +18,7 @@ class PersonalHeaderNavbar extends Component {
     this.setState(prevState => ({
       [stateName]: !prevState[stateName],
     }), () => {
-      const { twoStates } = this.state;
+      const twoStates = this.state;
       if (twoStates[stateName]) {
         this.startEventListenerByActive(stateName);
       } else {
@@ -66,6 +66,7 @@ class PersonalHeaderNavbar extends Component {
           <li><NavLink to="/elements/">Elements</NavLink></li>
           <li><NavLink to="/main-page/">MainPage</NavLink></li>
           <li><NavLink to="/todo-page/">Todopage</NavLink></li>
+          <li><NavLink to="/about/">About</NavLink></li>
           <li><a href="portfolio.html">Portfolio</a></li>
           <li className="menu-has-children" ref={(node) => { this.wrapperBlogRef = node; }}>
             <a href="javascript:void(0)" onClick={() => this.handleHeaderItemClick('blogdropdownOpen')}>Blog</a>
