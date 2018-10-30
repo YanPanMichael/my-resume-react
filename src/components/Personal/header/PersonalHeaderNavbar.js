@@ -18,7 +18,7 @@ class PersonalHeaderNavbar extends Component {
     this.setState(prevState => ({
       [stateName]: !prevState[stateName],
     }), () => {
-      const { twoStates } = this.state;
+      const twoStates = this.state;
       if (twoStates[stateName]) {
         this.startEventListenerByActive(stateName);
       } else {
