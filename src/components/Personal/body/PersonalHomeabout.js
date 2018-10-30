@@ -29,12 +29,11 @@ class PersonalContentHomeabout extends Component {
               <h6>About Me</h6>
               <h1 className="text-uppercase">Personal Details</h1>
               <p>
-                Here,
-                 I focus on a range of items and features that we use in life
-                  without giving them a second thought.
-                 such as Coca Cola. Dolor sit amet, consectetur adipisicing elit,
-                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                   Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                Here, I focus on a range of items and features that I introduce myself in life
+                without giving them a second thought.
+                I am graduated from CSU in 2016 and my major is CS,
+                I am good at UI developing as well as making research on ML.
+                My deliver and achievements are show in my resume.
               </p>
               <button type="button" className="primary-btn text-uppercase" style={{ borderRadius: 8 }} onClick={this.togglePersonalDetail}>View Full Details</button>
             </div>
