@@ -9,17 +9,20 @@ class PersonalHeaderNavbar extends Component {
     this.state = {
       blogdropdownOpen: false,
       pagedropdownOpen: false,
+      thirdPageOnblurControl: false,
     };
     this.handleHeaderItemClick = this.handleHeaderItemClick.bind(this);
     this.handleClickOutside = this.handleClickOutside.bind(this);
+    this.handleOnblurEvent = this.handleOnblurEvent.bind(this);
+    this.handleThirdIconClick = this.handleThirdIconClick.bind(this);
   }
 
   handleHeaderItemClick(stateName) {
     this.setState(prevState => ({
       [stateName]: !prevState[stateName],
     }), () => {
-      const twoStates = this.state;
-      if (twoStates[stateName]) {
+      const statesTotal = this.state;
+      if (statesTotal[stateName]) {
         this.startEventListenerByActive(stateName);
       } else {
         this.stopEventListenerByInActive(stateName);
@@ -55,9 +58,22 @@ class PersonalHeaderNavbar extends Component {
     }
   }
 
+  handleOnblurEvent(event) {
+    event.preventDefault();
+    this.setState({ thirdPageOnblurControl: false });
+  }
+
+  handleThirdIconClick(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    this.setState(prevState => ({
+      thirdPageOnblurControl: !prevState.thirdPageOnblurControl,
+    }));
+  }
+
   render() {
     const { navMenuContainerRefFun } = this.props;
-    const { blogdropdownOpen, pagedropdownOpen } = this.state;
+    const { blogdropdownOpen, pagedropdownOpen, thirdPageOnblurControl } = this.state;
     return (
       <nav className="nav-menu-container" ref={navMenuContainerRefFun} onBlur={console.log('onBlur to handle click event out')}>
         <ul className="nav-menu">
@@ -75,6 +91,10 @@ class PersonalHeaderNavbar extends Component {
           <li className="menu-has-children" ref={(node) => { this.wrapperPageRef = node; }}>
             <a href="javascript:void(0)" onClick={() => this.handleHeaderItemClick('pagedropdownOpen')}>Pages</a>
             {pagedropdownOpen && <PersonalHeaderDropDown dropItemsMapArray={{ Elements: 'elements.html', 'Level 2': 'level2.html' }} />}
+          </li>
+          <li className="menu-has-children" onBlur={this.handleOnblurEvent}>
+            <a href="#" onClick={this.handleThirdIconClick}>OnBlur</a>
+            {thirdPageOnblurControl && <PersonalHeaderDropDown dropItemsMapArray={{ 'page 1': 'page1.html', 'page 2': 'page2.html', 'page 3': 'page3.html' }} />}
           </li>
           <li><a href="contact.html">Contact</a></li>
         </ul>

@@ -51,6 +51,7 @@ ReactDOM.render(
         <Route path="/main-page" component={MainPage} />
         <Route path="/todo-page" component={TodoListPage} />
         <Route path="/about" component={About} />
+        <Route path="/" exact component={App} />
       </div>
     </BrowserRouter>
   </Provider>,

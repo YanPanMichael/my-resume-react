@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
 import 'babel-polyfill';
-import PersonalHeaderContainer from '../containers/PersonalHeaderContainer';
-import PersonalContentBannerContainer from '../containers/PersonalContentBannerContainer';
-import PersonalContentHomeabout from './Personal/body/PersonalHomeabout';
-import PersonalContentServicesSection from './Personal/body/PersonalContentServicesSection';
-import PersonalContentBrands from './Personal/body/PersonalContentBrands';
-import PersonalFooter from './Personal/footer/PersonalFooter';
+import Personal from './Personal/Personal';
 
 import '../css/App.css';
 import '../css/linearicons.css';
@@ -21,12 +16,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <PersonalHeaderContainer />
-        <PersonalContentBannerContainer />
-        <PersonalContentHomeabout />
-        <PersonalContentServicesSection />
-        <PersonalContentBrands />
-        <PersonalFooter />
+        <Personal />
       </div>
     );
   }
