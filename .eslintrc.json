@@ -57,7 +57,8 @@
     "document": true,
     "foo": true,
     "window": true,
-    "require": true
+    "require": true,
+    "jest": true
   },
   "env": {
     "browser": true,
