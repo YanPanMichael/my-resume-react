@@ -11,6 +11,7 @@
       0
     ],
     "linebreak-style": 0,
+    "SwitchCase": 0,
     "react/prefer-stateless-function": [
       0,
       {}
@@ -33,6 +34,7 @@
     "no-alert": [
       0
     ],
+    "indent": ["error", 2, {"SwitchCase": 1}],
     "no-debugger": 0,
     "import/no-extraneous-dependencies": 0,
     "no-script-url": 0,
