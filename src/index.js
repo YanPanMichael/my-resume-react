@@ -8,17 +8,13 @@ import {
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 // import { Router, Route, Switch, browserHistory } from 'react-router'
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 // import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
 import { createLogger } from 'redux-logger';
 import rootReducer from './reducers';
 import './index.css';
 import App from './components/App';
-import Elements from './components/Elements/Elements';
-import ResumePDF from './components/PDF/ResumePDF';
-import MainPage from './components/MainPage';
-import TodoListPage from './components/TodoList';
-import About from './components/About/About';
+
 // import registerServiceWorker from './registerServiceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -44,15 +40,7 @@ ReactDOM.render(
       </Route>
     </Router> */}
     <BrowserRouter>
-      <div>
-        <Route path="/my-resume" component={App} />
-        <Route path="/resume-pdf" component={ResumePDF} />
-        <Route path="/elements" component={Elements} />
-        <Route path="/main-page" component={MainPage} />
-        <Route path="/todo-page" component={TodoListPage} />
-        <Route path="/about" component={About} />
-        <Route path="/" exact component={App} />
-      </div>
+      <App />
     </BrowserRouter>
   </Provider>,
   document.getElementById('root'),

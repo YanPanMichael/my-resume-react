@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PersonalHeaderContainer from '../../containers/PersonalHeaderContainer';
 import PersonalContentBannerContainer from '../../containers/PersonalContentBannerContainer';
 import PersonalContentHomeabout from './body/PersonalHomeabout';
 import PersonalContentServicesSection from './body/PersonalContentServicesSection';
@@ -10,7 +9,6 @@ class Personal extends Component {
   render() {
     return (
       <div>
-        <PersonalHeaderContainer />
         <PersonalContentBannerContainer />
         <PersonalContentHomeabout />
         <PersonalContentServicesSection />
