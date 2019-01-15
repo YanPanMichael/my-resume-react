@@ -33,7 +33,6 @@ class App extends Component {
           <Route path="/main-page" component={MainPage} />
           <Route path="/todo-page" component={TodoListPage} />
           <Route path="/about" component={About} />
-          <Route path="/" exact component={App} />
         </section>
       </div>
     );
