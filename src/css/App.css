@@ -171,6 +171,15 @@ li {
   text-align: -webkit-match-parent;
 }
 
+article.has-background-image {
+  background-attachment: fixed;
+  background-position: center 60px;
+  background-color: transparent;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
 div.container .fadeOut{
   opacity:0;
   width:100%;
@@ -198,7 +207,8 @@ div.container .fadeIn{
 
 #header.header-scrolled {
   transition: all 0.5s;
-  box-shadow: -21.213px 10.213px 30px 5px rgba(158, 158, 158, 0.3);
+  /* box-shadow: -21.213px 10.213px 30px 5px rgba(158, 158, 158, 0.3); */
+  box-shadow: -10.213px 5.213px 20px 2px rgba(158, 158, 158, 0.3);
 }
 
 #header.header-scrolled .main-menu {
