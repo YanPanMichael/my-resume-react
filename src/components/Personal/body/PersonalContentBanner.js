@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 // import { Collapse, Button, CardBody, Card } from 'reactstrap';
 import throttle from '../../../utils/throttle';
 
+import Background from '../../../assets/img/personal/photo-bg-sea.jpg';
+
 class PersonalContentBanner extends Component {
   constructor(props) {
     super(props);
@@ -28,27 +30,44 @@ class PersonalContentBanner extends Component {
 
   render() {
     return (
-      <section className="banner-area" ref={(node) => { this.bannerRoot = node; }}>
-        <div className="container">
-          <div className="row fullscreen align-items-center justify-content-between">
-            <div className="col-lg-9 col-md-9 banner-left">
-              <h6>This is me</h6>
-              <h1>Yan Pan</h1>
-              <p>
-                I am an front-end UI engineer, also I am a researcher.
-                I am been working for CITI for more than two and a half years.
-              </p>
-              <button type="button" style={{ borderRadius: 8 }} className="primary-btn text-uppercase">discover now</button>
+      <section
+        className="banner-area"
+        ref={node => {
+          this.bannerRoot = node;
+        }}
+      >
+        <article
+          className="has-background-image"
+          style={{ backgroundImage: `url(${Background})` }}
+        >
+          {/* <div style={ { backgroundImage: `url(require("images/img.svg"))` } }> */}
+          <div className="container">
+            <div className="row fullscreen align-items-center justify-content-between">
+              <div className="col-lg-9 col-md-9 banner-left">
+                <h6>This is me</h6>
+                <h1>Yan Pan</h1>
+                <p>
+                  I am an front-end UI engineer, also I am a researcher. I am been working for CITI
+                  for more than two and a half years.
+                </p>
+                <button
+                  type="button"
+                  style={{ borderRadius: 8 }}
+                  className="primary-btn text-uppercase"
+                >
+                  discover now
+                </button>
+              </div>
             </div>
           </div>
-        </div>
+        </article>
       </section>
     );
   }
 }
 
 PersonalContentBanner.propTypes = {
-  updateHeaderShadow: PropTypes.func.isRequired,
+  updateHeaderShadow: PropTypes.func.isRequired
 };
 
 export default PersonalContentBanner;
