@@ -43,7 +43,7 @@ class PersonalContentBanner extends Component {
           {/* <div style={ { backgroundImage: `url(require("images/img.svg"))` } }> */}
           <div className="container">
             <div className="row fullscreen align-items-center justify-content-between">
-              <div className="col-lg-9 col-md-9 banner-left">
+              <div className="col-lg-9 col-md-9 banner-left name-introduce">
                 <h6>This is me</h6>
                 <h1>Yan Pan</h1>
                 <p>
@@ -53,7 +53,7 @@ class PersonalContentBanner extends Component {
                 <button
                   type="button"
                   style={{ borderRadius: 8 }}
-                  className="primary-btn text-uppercase"
+                  className="primary-btn text-uppercase discover-now"
                 >
                   discover now
                 </button>
