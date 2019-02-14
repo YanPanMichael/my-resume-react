@@ -2485,6 +2485,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   box-shadow: 0px 20px 20px 0px rgba(132, 144, 255, 0.3);
 }
 
+.banner-left .primary-btn.discover-now:hover {
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.3);
+}
+
 @media (max-width: 767px) {
   .banner-left {
     margin-top: 100px;

@@ -192,6 +192,10 @@ div.container .fadeIn{
   transition: width 0.5s, height 1.2s, opacity 1.0s 0.3s;
 }
 
+div.container .fullscreen .name-introduce {
+  color: #000000;
+}
+
 .spin-in {
   opacity: .2;
   height: 50px;
