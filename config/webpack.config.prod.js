@@ -179,6 +179,9 @@ module.exports = {
               // @remove-on-eject-end
               compact: true,
             },
+            // query: {
+            //   presets:['react','es2015','stage-0']
+            // }      
           },
           // The notation here is somewhat confusing.
           // "postcss" loader applies autoprefixer to our CSS.
