@@ -178,6 +178,9 @@ module.exports = {
               // directory for faster rebuilds.
               cacheDirectory: true,
             },
+            // query: {
+            //   presets:['react','es2015','stage-0']
+            // }
           },
           // "postcss" loader applies autoprefixer to our CSS.
           // "css" loader resolves paths in CSS and adds assets as dependencies.
