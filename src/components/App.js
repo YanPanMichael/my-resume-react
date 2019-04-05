@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import 'babel-polyfill';
 import { Route } from 'react-router-dom';
 
+import 'idempotent-babel-polyfill';
+
 import Personal from './Personal/Personal';
 import PersonalHeaderContainer from '../containers/PersonalHeaderContainer';
 
