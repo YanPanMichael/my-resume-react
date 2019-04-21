@@ -128,6 +128,7 @@ a:active, a:hover {
 
 .left-part-container {
   position: relative;
+  text-align: center;
 }
 
 .detail-absolute {
@@ -247,4 +248,8 @@ ul.social_icon li i.fa.pf-icon {
   padding: 0;
   text-align: center;
   display: inline;
+}
+
+div.container .personal-photo {
+  width: 350px;
 }

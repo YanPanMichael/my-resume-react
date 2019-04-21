@@ -34,7 +34,7 @@ class PersonalHomeaboutPersonInformation extends Component {
     const { personalDetailFlag } = this.props;
     return (
       <div className="left-part-container">
-        <img className={`img-fluid ${!personalDetailFlag ? 'fadeIn' : 'fadeOut'}`} src={require('../../../assets/img/personal/personal_main.JPG')} alt="" />
+        <img className={`img-fluid personal-photo ${!personalDetailFlag ? 'fadeIn' : 'fadeOut'}`} src={require('../../../assets/img/personal/personal_main.JPG')} alt="" />
         <div className={`detail-absolute ${personalDetailFlag ? 'fadeIn' : 'fadeOut'}`}>
           <div className="person_information">
             <ul>
