@@ -9,14 +9,23 @@ const throttle = (func, wait, options) => {
   if (!options) options = {};
 
   let later = function() {
-    previous = options.leading === false ? 0 : (Date.now || function(){ return new Date().getTime(); })();
+    previous =
+      options.leading === false
+        ? 0
+        : (Date.now ||
+            function() {
+              return new Date().getTime();
+            })();
     timeout = null;
     result = func.apply(context, args);
     if (!timeout) context = args = null;
   };
 
   let throttled = function() {
-    let now = (Date.now || function(){ return new Date().getTime(); })();
+    let now = (Date.now ||
+      function() {
+        return new Date().getTime();
+      })();
     if (!previous && options.leading === false) previous = now;
     let remaining = wait - (now - previous);
     context = this;

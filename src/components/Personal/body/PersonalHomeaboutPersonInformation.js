@@ -34,7 +34,7 @@ class PersonalHomeaboutPersonInformation extends Component {
     const { personalDetailFlag } = this.props;
     return (
       <div className="left-part-container">
-        <img className={`img-fluid ${!personalDetailFlag ? 'fadeIn' : 'fadeOut'}`} src={require('../../../assets/img/personal/about-img.png')} alt="" />
+        <img className={`img-fluid ${!personalDetailFlag ? 'fadeIn' : 'fadeOut'}`} src={require('../../../assets/img/personal/personal_main.JPG')} alt="" />
         <div className={`detail-absolute ${personalDetailFlag ? 'fadeIn' : 'fadeOut'}`}>
           <div className="person_information">
             <ul>
@@ -50,7 +50,7 @@ class PersonalHomeaboutPersonInformation extends Component {
           </div>
           <ul className="social_icon">
             {Object.keys(this.socialDetailData).map(elemKey => (
-              <li key={elemKey}><a href={this.socialDetailData[elemKey]} target="_blank"><i className={`fa fa-${elemKey}`} /></a></li>
+              <li key={elemKey}><a href={this.socialDetailData[elemKey]} target="_blank"><i className={`fa fa-${elemKey} pf-icon`} /></a></li>
             ))}
           </ul>
         </div>

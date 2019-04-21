@@ -1,6 +1,7 @@
 ul.social_icon {
   display: block;
   margin-bottom: 0;
+  text-align: center;
 }
 
 ul.social_icon li {
@@ -240,4 +241,10 @@ div.container .fullscreen .name-introduce {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+ul.social_icon li i.fa.pf-icon {
+  padding: 0;
+  text-align: center;
+  display: inline;
 }

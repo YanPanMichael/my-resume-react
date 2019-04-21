@@ -29,11 +29,11 @@ class PersonalFooter extends Component {
                 <h4>Follow Me</h4>
                 <p>Let us be social</p>
                 <div className="footer-social d-flex align-items-center">
-                  <a id="personal-footer-mailto" href={`mailto:panyancsu@163.com?subject=test&cc=yanpancsu@icloud.com&body=use mailto sample Copyright ${new Date().getFullYear()}`}><i className="fa fa-envelope" /></a>
-                  <a href="#"><i className="fa fa-qq" /></a>
-                  <a href="#"><i className="fa fa-weixin" /></a>
-                  <a href="#"><i className="fa fa-linkedin" /></a>
-                  <a href="https://github.com/YanPanMichael" target="_blank"><i className="fa fa-github" /></a>
+                  <a id="personal-footer-mailto" href={`mailto:panyancsu@163.com?subject=test&cc=yanpancsu@icloud.com&body=use mailto sample Copyright ${new Date().getFullYear()}`}><i className="fa fa-envelope pf-icon" /></a>
+                  <a href="#"><i className="fa fa-qq pf-icon" /></a>
+                  <a href="#"><i className="fa fa-weixin pf-icon" /></a>
+                  <a href="#"><i className="fa fa-linkedin pf-icon" /></a>
+                  <a href="https://github.com/YanPanMichael" target="_blank"><i className="fa fa-github pf-icon" /></a>
                 </div>
               </div>
             </div>
