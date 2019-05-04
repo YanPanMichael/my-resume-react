@@ -253,3 +253,29 @@ ul.social_icon li i.fa.pf-icon {
 div.container .personal-photo {
   width: 350px;
 }
+
+.element-left-bar[contentEditable] {
+  position: fixed;
+  background-color: pink;
+  width: 200px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transform: translateX(-100%);
+  z-index: 2;
+}
+
+.element-left-bar.hidden[contentEditable] {
+  /* width: 0; */
+  transform: translateX(0);
+}
+
+.element-left-bar[contentEditable] .element-left-bar-btn {
+  position: absolute;
+  width: 40px;
+  height: 30px;
+  right: -40px;
+  top: 50%;
+  border: none;
+}
