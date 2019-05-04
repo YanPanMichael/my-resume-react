@@ -1,7 +1,18 @@
 import React, { Component } from 'react';
 import Resizable from 're-resizable';
 
+import LeftBarComponent from '../../common/LeftBarComponent';
+
 class Elements extends Component {
+  constructor(props) {
+    super(props);
+    this.childRef = React.createRef();
+  }
+
+  componentDidMount() {
+    console.log(this.childRef.current);
+  }
+
   render() {
     return (
       <div>
@@ -19,6 +30,7 @@ class Elements extends Component {
             </div>
           </div>
         </section>
+        <LeftBarComponent ref={this.childRef} />
         <section className="sample-text-area">
           <Resizable
             enable={{

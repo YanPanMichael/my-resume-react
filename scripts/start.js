@@ -97,7 +97,7 @@ choosePort(HOST, DEFAULT_PORT)
         clearConsole();
       }
       console.log(chalk.cyan('Starting the development server...\n'));
-      openBrowser(urls.localUrlForBrowser);
+      openBrowser('http://localhost:3000/my-resume/');
     });
 
     ['SIGINT', 'SIGTERM'].forEach(function(sig) {
