@@ -4,6 +4,7 @@ import { Route } from 'react-router-dom';
 
 import 'idempotent-babel-polyfill';
 
+import CanvasNest from 'canvas-nest.js';
 import Personal from './Personal/Personal';
 import PersonalHeaderContainer from '../containers/PersonalHeaderContainer';
 
@@ -24,6 +25,24 @@ import '../css/owl.carousel.css';
 import '../css/main.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.config = {
+      color: '172, 214, 255',
+      count: 88
+    };
+  }
+
+  componentWillMount() {
+    // Using config rendering effect at 'element'.
+    this.cn = new CanvasNest(document.getElementById('root'), this.config);
+  }
+
+  componentWillUnmount() {
+    // destroy
+    this.cn.destroy();
+  }
+
   render() {
     return (
       <div>
