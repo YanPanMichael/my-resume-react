@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import 'babel-polyfill';
 import { Route, Switch } from 'react-router-dom';
 
 import 'idempotent-babel-polyfill';
@@ -10,7 +9,6 @@ import PersonalHeaderContainer from '../containers/PersonalHeaderContainer';
 
 import Elements from './Elements/Elements';
 import ResumePDF from './PDF/ResumePDF';
-import MainPage from './MainPage';
 import TodoListPage from './TodoList';
 import About from './About/About';
 
@@ -45,19 +43,19 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <React.Fragment>
         <PersonalHeaderContainer />
-        <section>
+        <main>
           <Switch>
+            <Route path="/" exact component={Personal} />
             <Route path="/my-resume" component={Personal} />
             <Route path="/resume-pdf" component={ResumePDF} />
             <Route path="/elements" component={Elements} />
-            <Route path="/main-page" component={MainPage} />
             <Route path="/todo-page" component={TodoListPage} />
             <Route path="/about" component={About} />
           </Switch>
-        </section>
-      </div>
+        </main>
+      </React.Fragment>
     );
   }
 }

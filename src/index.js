@@ -8,7 +8,7 @@ import {
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 // import { Router, Route, Switch, browserHistory } from 'react-router'
-import { BrowserRouter, HashRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 // import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
 import { createLogger } from 'redux-logger';
 import rootReducer from './reducers';
@@ -31,6 +31,12 @@ const store = compose(applyMiddleware(...middlewares))(createStore)(rootReducer)
 // Create an enhanced history that syncs navigation events with the store
 // const history = syncHistoryWithStore(browserHistory, store)
 
+// 使用默认的确认函数
+const getConfirmation = (message, callback) => {
+  const allowTransition = window.confirm(message);
+  callback(allowTransition);
+};
+
 ReactDOM.render(
   <Provider store={store}>
     {/* V3 version, Tell the Router to use our enhanced history */}
@@ -39,7 +45,7 @@ ReactDOM.render(
         <Route path="mainPage" component={MainPage} />
       </Route>
     </Router> */}
-    <HashRouter>
+    <HashRouter basename='/cv' getUserConfirmation={getConfirmation}>
       <App />
     </HashRouter>
   </Provider>,

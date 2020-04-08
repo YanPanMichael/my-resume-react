@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import PersonalHeaderDropDown from './PersonalHeaderDropDown';
 
 class PersonalHeaderNavbar extends Component {
@@ -80,10 +80,9 @@ class PersonalHeaderNavbar extends Component {
           <li><a href="index.html">Home</a></li>
           <li><NavLink to="/resume-pdf/">Resume</NavLink></li>
           <li><NavLink to="/elements/">Elements</NavLink></li>
-          <li><NavLink to="/main-page/">MainPage</NavLink></li>
-          <li><NavLink to="/todo-page/">Todopage</NavLink></li>
-          <li><NavLink to="/about/">About</NavLink></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><NavLink to="/todo-page/" exact activeStyle={{color: 'red'}}>Todopage</NavLink></li>
+          <li><NavLink to="/about/" activeClassName="selected">About</NavLink></li>
+          <li><Link to="/portfolio/">Portfolio</Link></li>
           <li className="menu-has-children" ref={(node) => { this.wrapperBlogRef = node; }}>
             <a href="javascript:void(0)" onClick={() => this.handleHeaderItemClick('blogdropdownOpen')}>Blog</a>
             {blogdropdownOpen && <PersonalHeaderDropDown dropItemsMapArray={{ 'Page 1': 'page1.html', 'Page 2': 'page2.html' }} />}
