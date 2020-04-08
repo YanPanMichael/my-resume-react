@@ -8,7 +8,7 @@ import {
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 // import { Router, Route, Switch, browserHistory } from 'react-router'
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, HashRouter } from 'react-router-dom';
 // import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
 import { createLogger } from 'redux-logger';
 import rootReducer from './reducers';
@@ -39,9 +39,9 @@ ReactDOM.render(
         <Route path="mainPage" component={MainPage} />
       </Route>
     </Router> */}
-    <BrowserRouter>
+    <HashRouter>
       <App />
-    </BrowserRouter>
+    </HashRouter>
   </Provider>,
   document.getElementById('root'),
 );

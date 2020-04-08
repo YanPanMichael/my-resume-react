@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import 'babel-polyfill';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import 'idempotent-babel-polyfill';
 
@@ -48,12 +48,14 @@ class App extends Component {
       <div>
         <PersonalHeaderContainer />
         <section>
-          <Route path="/my-resume" component={Personal} />
-          <Route path="/resume-pdf" component={ResumePDF} />
-          <Route path="/elements" component={Elements} />
-          <Route path="/main-page" component={MainPage} />
-          <Route path="/todo-page" component={TodoListPage} />
-          <Route path="/about" component={About} />
+          <Switch>
+            <Route path="/my-resume" component={Personal} />
+            <Route path="/resume-pdf" component={ResumePDF} />
+            <Route path="/elements" component={Elements} />
+            <Route path="/main-page" component={MainPage} />
+            <Route path="/todo-page" component={TodoListPage} />
+            <Route path="/about" component={About} />
+          </Switch>
         </section>
       </div>
     );
