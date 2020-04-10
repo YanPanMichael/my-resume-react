@@ -23,7 +23,8 @@ class ResumePDF extends Component {
       <div className="pdf-resume">
         <Document
           className="pdf-resume-document"
-          file={require('../../assets/pdf/panyan_english_version.pdf')}
+          file={require('../../assets/pdf/cv_YanPan_english.pdf')}
+          // file={require('../../assets/pdf/panyan_english_version.pdf')}
           onLoadSuccess={this.onDocumentLoadSuccess}
           loading={<div className="pdf-resume-loading">Please wait!</div>}
           onLoadError={error => alert(`Error while loading pages! ${error.message}`)}
