@@ -96,6 +96,7 @@ class PersonalHeaderNavbar extends Component {
             {thirdPageOnblurControl && <PersonalHeaderDropDown dropItemsMapArray={{ 'page 1': 'page1.html', 'page 2': 'page2.html', 'page 3': 'page3.html' }} />}
           </li>
           <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     );
